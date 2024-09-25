@@ -1,7 +1,13 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
+import 'package:unit/modules/more/presentation/screens/more_screen.dart';
+import 'package:unit/modules/orders/presentation/screens/orders_screen.dart';
+import 'package:unit/modules/saves/presentation/screens/saves_screen.dart';
+import 'package:unit/modules/search/presentation/screens/search_screen.dart';
 
 import '../../../../shared/resources/colors.dart';
+
 class HomeScrren extends StatefulWidget {
   const HomeScrren({super.key});
 
@@ -10,39 +16,34 @@ class HomeScrren extends StatefulWidget {
 }
 
 class _HomeScrrenState extends State<HomeScrren> {
+  int _selectedItem = 0;
 
-  int _selectedItemPosition=0;
+  final List<Widget> _pages = [
+    const SearchScreen(),
+    const OrdersScreen(),
+    const SavesScreen(),
+
+    const MoreScreen(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        body: _pages.elementAt(_selectedItem),
         bottomNavigationBar: SnakeNavigationBar.color(
-        // behaviour: snakeBarStyle,
-        // snakeShape: snakeShape,
-        // shape: BottomBar,
-        // padding: padding,
-
-        ///configuration for SnakeNavigationBar.color
-        // snakeViewColor: selectedColor,
-        selectedItemColor: AppColors.primaryColor,
-        unselectedItemColor: Colors.blueGrey,
-        snakeShape: SnakeShape.indicator,
-        ///configuration for SnakeNavigationBar.gradient
-        //snakeViewGradient: selectedGradient,
-        //selectedItemGradient: snakeShape == SnakeShape.indicator ? selectedGradient : null,
-        //unselectedItemGradient: unselectedGradient,
-
-        showUnselectedLabels: true,
-        showSelectedLabels: true,
-
-        currentIndex: _selectedItemPosition,
-        onTap: (index) => setState(() => _selectedItemPosition = index),
-    items: const [
-    BottomNavigationBarItem(icon: Icon(Icons.notifications), label: 'tickets'),
-    BottomNavigationBarItem(icon: Icon(Icons.calendar_month), label: 'calendar'),
-    BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
-    BottomNavigationBarItem(icon: Icon(Icons.podcasts), label: 'microphone'),
-    BottomNavigationBarItem(icon: Icon(Icons.search), label: 'search')
-    ],
-    ));
+          selectedItemColor: AppColors.primaryColor,
+          unselectedItemColor: Colors.blueGrey,
+          snakeShape: SnakeShape.indicator,
+          showUnselectedLabels: true,
+          showSelectedLabels: true,
+          currentIndex: _selectedItem,
+          onTap: (index) => setState(() => _selectedItem = index),
+          items:   [
+            BottomNavigationBarItem(icon: const Icon(Icons.search), label: 'search'.tr()),
+            BottomNavigationBarItem(
+                icon: const Icon(Icons.book), label: 'orders'.tr()),
+            BottomNavigationBarItem(icon: const Icon(Icons.savings), label: 'savings'.tr()),
+            BottomNavigationBarItem(icon: const Icon(Icons.menu), label: 'more'.tr())
+          ],
+        ));
   }
 }

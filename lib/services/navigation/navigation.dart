@@ -22,5 +22,5 @@ class AppNavigation {
   }
 
   static GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
-  static BuildContext context = navigatorKey.currentContext!;
+  static BuildContext  get context => navigatorKey.currentContext!;
 }

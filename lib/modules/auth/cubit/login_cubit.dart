@@ -7,10 +7,11 @@ import 'package:unit/shared/widgets/custom_snack_bar.dart';
 
 class LoginCubit extends Cubit<BaseCubitState> {
   final authRepository = GetIt.instance.get<AuthRepository>();
-
+  final nameController=TextEditingController();
+  final passwordController=TextEditingController();
   LoginCubit() : super(BaseCubitState.initial);
-  Future<void> login({required String email, required String password}) async {
-    final result = await authRepository.login(email: email, password: password);
+  Future<void> login() async {
+    final result = await authRepository.login(email: nameController.text, password: passwordController.text);
     result.fold((error) {
       CustomSnackBars.showErrorToast(title: error.msg ?? "Error Login");
       emit(BaseCubitState.error);

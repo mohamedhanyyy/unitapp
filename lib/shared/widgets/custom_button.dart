@@ -3,6 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:unit/shared/resources/colors.dart';
 
+
+const customButtonTextStyle=TextStyle(
+  fontSize: 13,
+  color: AppColors.whiteColor,
+  fontWeight: FontWeight.w400
+);
 class CustomElevatedButton extends StatelessWidget {
   final String buttonText;
   final Function onTap;
@@ -36,24 +42,19 @@ class CustomElevatedButton extends StatelessWidget {
           onTap();
         },
         style: ElevatedButton.styleFrom(
-          minimumSize: Size.fromHeight(56.h),
+          minimumSize: Size.fromHeight(48.h),
           elevation: 0,
           backgroundColor: color ?? AppColors.primaryColor,
           shape: RoundedRectangleBorder(
             side: BorderSide(color: borderColor ?? AppColors.primaryColor),
-            borderRadius: BorderRadius.circular(borderRadius ?? 12.r),
+            borderRadius: BorderRadius.circular(borderRadius ?? 6),
           ),
         ),
         child: widget ??
             Text(
               buttonText.tr(),
               textAlign: TextAlign.center,
-              style: TextStyle(
-                color: fontColor ?? AppColors.primaryColor,
-                fontSize: fontSize ?? 15.sp,
-                decoration: TextDecoration.none,
-                fontWeight: FontWeight.w400,
-              ),
+              style: customButtonTextStyle
             ),
       ),
     );
@@ -77,12 +78,12 @@ class CustomCancelElevatedButton extends StatelessWidget {
           Navigator.pop(context);
         },
         style: ElevatedButton.styleFrom(
-          minimumSize: Size.fromHeight(56.h),
+          minimumSize: Size.fromHeight(48.h),
           elevation: 0,
           backgroundColor: AppColors.whiteColor,
           shape: RoundedRectangleBorder(
             side: const BorderSide(color: AppColors.primaryColor),
-            borderRadius: BorderRadius.circular(12.r),
+            borderRadius: BorderRadius.circular(6),
           ),
         ),
         child: Text(
@@ -126,12 +127,12 @@ class DisabledElevatedButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: () {},
         style: ElevatedButton.styleFrom(
-          minimumSize: Size.fromHeight(56.h),
+          minimumSize: Size.fromHeight(48.h),
           elevation: 0,
           backgroundColor: color ?? AppColors.primaryColor,
           shape: RoundedRectangleBorder(
             side: BorderSide(color: borderColor ?? AppColors.primaryColor),
-            borderRadius: BorderRadius.circular(borderRadius ?? 12.r),
+            borderRadius: BorderRadius.circular(borderRadius ?? 6),
           ),
         ),
         child: Text(
@@ -148,52 +149,3 @@ class DisabledElevatedButton extends StatelessWidget {
   }
 }
 
-class DoneElevatedButton extends StatelessWidget {
-  final double? borderRadius;
-  final Color? fontColor;
-  final double? fontSize;
-  final Widget? widget;
-  final Color? color;
-  final Color? borderColor;
-
-  const DoneElevatedButton({
-    super.key,
-    this.borderRadius,
-    this.fontColor,
-    this.widget,
-    this.borderColor,
-    this.fontSize,
-    this.color,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20.w),
-      child: ElevatedButton(
-        onPressed: () {
-          Navigator.pop(context);
-        },
-        style: ElevatedButton.styleFrom(
-          minimumSize: Size.fromHeight(56.h),
-          elevation: 0,
-          backgroundColor: color ?? AppColors.primaryColor,
-          shape: RoundedRectangleBorder(
-            side: BorderSide(color: borderColor ?? AppColors.primaryColor),
-            borderRadius: BorderRadius.circular(borderRadius ?? 12.r),
-          ),
-        ),
-        child: Text(
-          'done'.tr(),
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: fontColor ?? AppColors.primaryColor,
-            fontSize: fontSize ?? 16.sp,
-            decoration: TextDecoration.none,
-            fontWeight: FontWeight.w400,
-          ),
-        ),
-      ),
-    );
-  }
-}

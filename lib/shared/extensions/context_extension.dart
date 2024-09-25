@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 extension CurrentLang on BuildContext {
   bool get isCurrentEnglish => locale == const Locale('en');
@@ -12,6 +13,9 @@ extension CurrentLang on BuildContext {
 
   EdgeInsets get bottomInsetsPadding =>
       EdgeInsets.only(bottom: MediaQuery.of(this).viewInsets.bottom);
+  EdgeInsets get horizontalPadding =>
+      EdgeInsets.symmetric(horizontal: 20.w);
+
 }
 
 extension ToColorFilter on Color {
