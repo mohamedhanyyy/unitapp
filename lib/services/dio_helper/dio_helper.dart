@@ -2,7 +2,9 @@ import 'dart:developer';
 
 import 'package:dio/dio.dart';
 import 'package:unit/services/shared_preferences/preferences_helper.dart';
-import 'package:unit/shared/const/api_consts.dart';
+
+import '../../core/const/api_consts.dart';
+// import 'package:unit/shared/const/api_consts.dart';
 
 class DioHelper {
   static BaseOptions opts = BaseOptions(

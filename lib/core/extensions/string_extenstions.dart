@@ -46,11 +46,13 @@ extension StringExtenstions on String {
     if (value == null || value.isEmpty) {
       return 'password is required'.tr();
     } else if (!regex.hasMatch(value)) {
-      return 'password must be at least 8 characters, include letters and numbers'.tr();
+      return 'password must be at least 8 characters, include letters and numbers'
+          .tr();
     } else {
       return null;
     }
   }
+
   String? confirmPasswordValidator(String? value, String password) {
     if (value == null || value.isEmpty) {
       return 'confirm password is required'.tr();
@@ -60,5 +62,4 @@ extension StringExtenstions on String {
     }
     return null;
   }
-
 }

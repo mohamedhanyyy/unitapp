@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../core/resources/colors.dart';
 import '../../core/resources/styles.dart';
+
 // import '../resources/colors.dart';
 // import '../resources/styles.dart';
 
@@ -34,13 +35,12 @@ class CustomPasswordTextField extends StatefulWidget {
   });
 
   @override
-  State<CustomPasswordTextField> createState() => _CustomPasswordTextFieldState();
+  State<CustomPasswordTextField> createState() =>
+      _CustomPasswordTextFieldState();
 }
 
 class _CustomPasswordTextFieldState extends State<CustomPasswordTextField> {
   bool _isObscured = true;
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -59,12 +59,12 @@ class _CustomPasswordTextFieldState extends State<CustomPasswordTextField> {
         filled: true,
         prefixIcon: widget.prefixIcon != null
             ? Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-          child:
-          SvgPicture.asset('assets/icons/${widget.prefixIcon}.svg'),
-        )
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child:
+                    SvgPicture.asset('assets/icons/${widget.prefixIcon}.svg'),
+              )
             : const SizedBox(width: 10),
-        suffixIcon:  IconButton(
+        suffixIcon: IconButton(
           icon: Icon(
             _isObscured ? Icons.visibility_off : Icons.visibility,
           ),
@@ -96,7 +96,6 @@ class _CustomPasswordTextFieldState extends State<CustomPasswordTextField> {
         ),
       ),
       validator: widget.validator,
-
       onChanged: widget.onChanged,
     );
   }

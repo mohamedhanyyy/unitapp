@@ -7,7 +7,9 @@ import '../../../../core/resources/colors.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
+
   final int index = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

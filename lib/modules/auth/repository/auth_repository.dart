@@ -1,13 +1,11 @@
 import 'package:dartz/dartz.dart';
 import 'package:unit/services/dio_helper/dio_helper.dart';
-import 'package:unit/shared/const/api_consts.dart';
 import 'package:unit/shared/model/user_model.dart';
 
+import '../../../core/const/api_consts.dart';
 import '../../../shared/model/error_model.dart';
 
 class AuthRepository {
-
-
   Future<Either<ErrorModel, UserModel>> login(
       {required String email, required String password}) async {
     final response = await DioHelper.postData(url: EndPoints.login);

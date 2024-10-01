@@ -3,29 +3,30 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get_it/get_it.dart';
+import 'package:unit/core/extensions/context_extension.dart';
+import 'package:unit/core/extensions/string_extenstions.dart';
 import 'package:unit/core/resources/colors.dart';
 import 'package:unit/core/resources/images.dart';
 import 'package:unit/core/resources/styles.dart';
 import 'package:unit/modules/auth/cubit/login_cubit.dart';
 import 'package:unit/modules/auth/presentation/screens/signup_screen.dart';
 import 'package:unit/services/navigation/navigation.dart';
-import 'package:unit/shared/cubit/base_cubit_state.dart';
-import 'package:unit/shared/extensions/context_extension.dart';
-import 'package:unit/shared/extensions/string_extenstions.dart';
 import 'package:unit/shared/widgets/custom_button.dart';
 import 'package:unit/shared/widgets/custom_loading_widget.dart';
 import 'package:unit/shared/widgets/custom_text_field.dart';
 
-// import '../../../../shared/resources/styles.dart';
+import '../../../../core/cubit/base_cubit_state.dart';
 import '../../../../shared/widgets/custom_pawword_text_field.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
+
   final loginCubit = GetIt.instance.get<LoginCubit>();
   final formKey = GlobalKey<FormState>();
 
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

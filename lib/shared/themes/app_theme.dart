@@ -15,11 +15,11 @@ class AppThemes {
     cardColor: AppColors.whiteColor,
     splashColor: Colors.transparent,
     appBarTheme: AppBarTheme(
-        iconTheme: IconThemeData(size: 13.sp),
-        titleSpacing: 0,
-        elevation: 0,
-        backgroundColor: const Color(0xffF9FAFB),
-   ),
+      iconTheme: IconThemeData(size: 13.sp),
+      titleSpacing: 0,
+      elevation: 0,
+      backgroundColor: const Color(0xffF9FAFB),
+    ),
     highlightColor: Colors.transparent,
     textSelectionTheme:
         const TextSelectionThemeData(cursorColor: AppColors.primaryColor),

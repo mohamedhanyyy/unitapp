@@ -13,9 +13,8 @@ extension CurrentLang on BuildContext {
 
   EdgeInsets get bottomInsetsPadding =>
       EdgeInsets.only(bottom: MediaQuery.of(this).viewInsets.bottom);
-  EdgeInsets get horizontalPadding =>
-      EdgeInsets.symmetric(horizontal: 20.w);
 
+  EdgeInsets get horizontalPadding => EdgeInsets.symmetric(horizontal: 20.w);
 }
 
 extension ToColorFilter on Color {

@@ -11,9 +11,9 @@ import 'package:unit/unit_app.dart';
 
 import 'shared/functions/restart_app.dart';
 
-final getIt = GetIt.instance;
-
 void registerObjects() {
+  final getIt = GetIt.instance;
+
   //register repository
   getIt.registerSingleton<AuthRepository>(AuthRepository());
 
@@ -28,7 +28,7 @@ void main() {
   registerObjects();
   GeneralFunctions.setPreferredOrientation();
 
-  PreferencesHelper.init().then((value) {
+  PreferencesHelper.init().then((_) {
     runApp(
       EasyLocalization(
         supportedLocales: const [Locale('ar'), Locale('en')],

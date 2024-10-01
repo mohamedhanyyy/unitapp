@@ -4,7 +4,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../shared/model/user_model.dart';
 
-
 class PreferencesHelper {
   static SharedPreferences? preferences;
 
@@ -78,11 +77,11 @@ class PreferencesHelper {
     preferences?.setBool('isVisitor', false);
   }
 
-  // static Widget get applicationFirstPage {
-  //   return PreferencesHelper.isKeptLogged
-  //       ? BottomNavigationScreen()
-  //       : PreferencesHelper.isFirstOpenApp
-  //           ? LoginScreen()
-  //           : IntroductionScreen();
-  // }
+// static Widget get applicationFirstPage {
+//   return PreferencesHelper.isKeptLogged
+//       ? BottomNavigationScreen()
+//       : PreferencesHelper.isFirstOpenApp
+//           ? LoginScreen()
+//           : IntroductionScreen();
+// }
 }

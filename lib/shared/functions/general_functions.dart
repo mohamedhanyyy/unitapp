@@ -67,7 +67,8 @@ class GeneralFunctions {
     if (controller.selection ==
         TextSelection.fromPosition(
             TextPosition(offset: controller.text.length - 1))) {
-      controller.selection = TextSelection.fromPosition(TextPosition(offset: controller.text.length));
+      controller.selection = TextSelection.fromPosition(
+          TextPosition(offset: controller.text.length));
     }
   }
 

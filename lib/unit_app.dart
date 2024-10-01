@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:unit/modules/auth/cubit/sign_up_cubit.dart';
-import 'package:unit/modules/auth/presentation/screens/signup_screen.dart';
 import 'package:unit/modules/home/presentation/screens/home_screen.dart';
 import 'package:unit/services/navigation/navigation.dart';
 import 'package:unit/shared/functions/general_functions.dart';

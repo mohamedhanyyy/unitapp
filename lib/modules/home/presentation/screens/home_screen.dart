@@ -27,15 +27,14 @@ class _HomeScrrenState extends State<HomeScrren> {
     const SavesScreen(),
     const MoreScreen(),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: _pages.elementAt(_selectedItem),
         bottomNavigationBar: SnakeNavigationBar.color(
-
           selectedItemColor: AppColors.primaryColor,
           unselectedItemColor: AppColors.primaryColor,
-
           snakeShape: SnakeShape.indicator,
           showUnselectedLabels: true,
           showSelectedLabels: true,
