@@ -18,6 +18,13 @@
   "password is required": "Password is required",
   "password must be at least 8 characters, include letters and numbers": "Password must be at least 8 characters, include letters and numbers",
   "confirm password is required": "Confirm password is required",
-  "passwords do not match": "Passwords do not match"
+  "passwords do not match": "Passwords do not match",
+
+  "////////////////////////////////////////": "////////////////////////////////////////",
+
+  "search": "Search",
+  "orders": "Orders",
+  "savings": "Savings",
+  "more": "More"
 
 }

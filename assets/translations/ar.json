@@ -18,6 +18,14 @@
   "password is required": "كلمة المرور مطلوبة",
   "password must be at least 8 characters, include letters and numbers": "يجب أن تحتوي كلمة المرور على 8 أحرف على الأقل، وتشمل أحرفًا وأرقامًا",
   "confirm password is required": "تأكيد كلمة المرور مطلوب",
-  "passwords do not match": "كلمات المرور غير متطابقة"
+  "passwords do not match": "كلمات المرور غير متطابقة",
+
+
+  "////////////////////////////////////////": "////////////////////////////////////////",
+
+  "search": "البحث",
+  "orders": "طلباتي",
+  "savings": "المحفوظات",
+  "more": "المزيد"
 
 }

@@ -1,12 +1,15 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:unit/modules/more/presentation/screens/more_screen.dart';
 import 'package:unit/modules/orders/presentation/screens/orders_screen.dart';
 import 'package:unit/modules/saves/presentation/screens/saves_screen.dart';
 import 'package:unit/modules/search/presentation/screens/search_screen.dart';
 
 import '../../../../core/resources/colors.dart';
+import '../../../../core/resources/icons.dart';
 
 class HomeScrren extends StatefulWidget {
   const HomeScrren({super.key});
@@ -22,7 +25,6 @@ class _HomeScrrenState extends State<HomeScrren> {
     const SearchScreen(),
     const OrdersScreen(),
     const SavesScreen(),
-
     const MoreScreen(),
   ];
   @override
@@ -30,19 +32,26 @@ class _HomeScrrenState extends State<HomeScrren> {
     return Scaffold(
         body: _pages.elementAt(_selectedItem),
         bottomNavigationBar: SnakeNavigationBar.color(
+
           selectedItemColor: AppColors.primaryColor,
-          unselectedItemColor: Colors.blueGrey,
+          unselectedItemColor: AppColors.primaryColor,
+
           snakeShape: SnakeShape.indicator,
           showUnselectedLabels: true,
           showSelectedLabels: true,
+          snakeViewColor: AppColors.primaryColor,
           currentIndex: _selectedItem,
           onTap: (index) => setState(() => _selectedItem = index),
-          items:   [
-            BottomNavigationBarItem(icon: const Icon(Icons.search), label: 'search'.tr()),
+          items: [
             BottomNavigationBarItem(
-                icon: const Icon(Icons.book), label: 'orders'.tr()),
-            BottomNavigationBarItem(icon: const Icon(Icons.savings), label: 'savings'.tr()),
-            BottomNavigationBarItem(icon: const Icon(Icons.menu), label: 'more'.tr())
+                icon: SvgPicture.asset(AppIcons.search), label: 'search'.tr()),
+            BottomNavigationBarItem(
+                icon: SvgPicture.asset(AppIcons.orders), label: 'orders'.tr()),
+            BottomNavigationBarItem(
+                icon: SvgPicture.asset(AppIcons.savings),
+                label: 'savings'.tr()),
+            BottomNavigationBarItem(
+                icon: SvgPicture.asset(AppIcons.menu), label: 'more'.tr()),
           ],
         ));
   }
