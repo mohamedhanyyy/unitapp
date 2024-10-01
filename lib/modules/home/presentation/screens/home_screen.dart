@@ -6,7 +6,7 @@ import 'package:unit/modules/orders/presentation/screens/orders_screen.dart';
 import 'package:unit/modules/saves/presentation/screens/saves_screen.dart';
 import 'package:unit/modules/search/presentation/screens/search_screen.dart';
 
-import '../../../../shared/resources/colors.dart';
+import '../../../../core/resources/colors.dart';
 
 class HomeScrren extends StatefulWidget {
   const HomeScrren({super.key});

@@ -3,6 +3,21 @@
   "password": "كلمة السر",
   "email": "البريد الإلكتروني",
   "full name": "الاسم الكامل",
-  "login": "تسجيل الدخول"
+  "login": "تسجيل الدخول",
+  "dont have an account": "ليس لديك حساب؟",
+  "confirm password": "تأكيد كلمة المرور",
+  "phone number": "رقم الهاتف",
+  "sign up": "إنشاء حساب",
+  "already have account": "لديك حساب بالفعل؟",
+  "email is required": "البريد الإلكتروني مطلوب",
+  "enter a valid email address": "أدخل عنوان بريد إلكتروني صالح",
+  "phone is required": "رقم الهاتف مطلوب",
+  "enter valid phone number": "أدخل رقم هاتف صالح",
+  "name is required": "الاسم مطلوب",
+  "name must be at least 2 characters": "يجب أن يكون الاسم على الأقل حرفين",
+  "password is required": "كلمة المرور مطلوبة",
+  "password must be at least 8 characters, include letters and numbers": "يجب أن تحتوي كلمة المرور على 8 أحرف على الأقل، وتشمل أحرفًا وأرقامًا",
+  "confirm password is required": "تأكيد كلمة المرور مطلوب",
+  "passwords do not match": "كلمات المرور غير متطابقة"
 
 }

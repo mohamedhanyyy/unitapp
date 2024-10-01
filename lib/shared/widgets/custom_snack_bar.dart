@@ -2,7 +2,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-import '../resources/colors.dart';
+import '../../core/resources/colors.dart';
+// import '../resources/colors.dart';
 
 class CustomSnackBars {
   static void showSuccessToast({required String title, Toast? length}) {

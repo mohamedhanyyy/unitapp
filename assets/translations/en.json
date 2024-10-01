@@ -3,5 +3,21 @@
   "password": "Password",
   "email": "Email",
   "full name": "Full name",
-  "login": "Login"
+  "login": "Login",
+  "dont have an account": "Don't have an account?",
+  "confirm password": "Confirm password",
+  "phone number": "Phone number",
+  "sign up": "Sign Up",
+  "already have account": "Already have account?",
+  "email is required": "Email is required",
+  "enter a valid email address": "Enter a valid email address",
+  "phone is required": "Phone is required",
+  "enter valid phone number": "Enter a valid phone number",
+  "name is required": "Name is required",
+  "name must be at least 2 characters": "Name must be at least 2 characters",
+  "password is required": "Password is required",
+  "password must be at least 8 characters, include letters and numbers": "Password must be at least 8 characters, include letters and numbers",
+  "confirm password is required": "Confirm password is required",
+  "passwords do not match": "Passwords do not match"
+
 }

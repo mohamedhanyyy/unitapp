@@ -1,7 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:unit/shared/resources/colors.dart';
+// import 'package:unit/shared/resources/colors.dart';
+
+import '../../core/resources/colors.dart';
 
 
 const customButtonTextStyle=TextStyle(
@@ -10,7 +12,7 @@ const customButtonTextStyle=TextStyle(
   fontWeight: FontWeight.w400
 );
 class CustomElevatedButton extends StatelessWidget {
-  final String buttonText;
+  final String ?buttonText;
   final Function onTap;
   final double? borderRadius;
   final Color? fontColor;
@@ -23,7 +25,7 @@ class CustomElevatedButton extends StatelessWidget {
   const CustomElevatedButton({
     super.key,
     required this.onTap,
-    required this.buttonText,
+      this.buttonText,
     this.borderRadius,
     this.fontColor,
     this.widget,
@@ -52,7 +54,7 @@ class CustomElevatedButton extends StatelessWidget {
         ),
         child: widget ??
             Text(
-              buttonText.tr(),
+              buttonText!.tr(),
               textAlign: TextAlign.center,
               style: customButtonTextStyle
             ),

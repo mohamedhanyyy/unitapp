@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../resources/colors.dart';
+import '../../core/resources/colors.dart';
+// import '../resources/colors.dart';
 
 class CustomLoadingWidget extends StatelessWidget {
   const CustomLoadingWidget({super.key});

@@ -2,8 +2,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../resources/colors.dart';
-import '../resources/styles.dart';
+import '../../core/resources/colors.dart';
+import '../../core/resources/styles.dart';
+// import '../resources/colors.dart';
+// import '../resources/styles.dart';
 
 class CustomPasswordTextField extends StatefulWidget {
   final TextEditingController controller;

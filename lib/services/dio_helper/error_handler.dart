@@ -1,8 +1,9 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:unit/services/shared_preferences/preferences_helper.dart';
- import '../../shared/model/error_model.dart';
-import '../../shared/resources/colors.dart';
+ import '../../core/resources/colors.dart';
+import '../../shared/model/error_model.dart';
+// import '../../shared/resources/colors.dart';
 import '../../shared/widgets/custom_snack_bar.dart';
 import '../navigation/navigation.dart';
 

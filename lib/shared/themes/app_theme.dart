@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:unit/shared/themes/palette.dart';
 
-import '../resources/colors.dart';
+import '../../core/resources/colors.dart';
+
+// import '../resources/colors.dart';
 
 class AppThemes {
   static ThemeData whiteTheme = ThemeData(

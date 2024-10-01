@@ -7,7 +7,8 @@ import 'package:unit/core/resources/colors.dart';
 import 'package:unit/core/resources/images.dart';
 import 'package:unit/core/resources/styles.dart';
 import 'package:unit/modules/auth/cubit/login_cubit.dart';
-import 'package:unit/modules/auth/presentation/screens/signup_screen.dart';
+import 'package:unit/modules/auth/cubit/sign_up_cubit.dart';
+import 'package:unit/modules/auth/presentation/screens/login_screen.dart';
 import 'package:unit/services/navigation/navigation.dart';
 import 'package:unit/shared/cubit/base_cubit_state.dart';
 import 'package:unit/shared/extensions/context_extension.dart';
@@ -15,17 +16,20 @@ import 'package:unit/shared/extensions/string_extenstions.dart';
 import 'package:unit/shared/widgets/custom_button.dart';
 import 'package:unit/shared/widgets/custom_loading_widget.dart';
 import 'package:unit/shared/widgets/custom_text_field.dart';
-
-// import '../../../../shared/resources/styles.dart';
 import '../../../../shared/widgets/custom_pawword_text_field.dart';
 
-class LoginScreen extends StatelessWidget {
-  LoginScreen({super.key});
-  final loginCubit = GetIt.instance.get<LoginCubit>();
+class SignUpScreen extends StatelessWidget {
+  SignUpScreen({super.key});
+
+  final signUpCubit = GetIt.instance.get<SignUpCubit>();
   final formKey = GlobalKey<FormState>();
 
   final emailController = TextEditingController();
+  final nameController = TextEditingController();
   final passwordController = TextEditingController();
+  final confirmPasswordController = TextEditingController();
+  final phoneController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,8 +51,24 @@ class LoginScreen extends StatelessWidget {
                 child: Text("full name".tr(), style: lightGrey13W400),
               ),
               CustomTextField(
-                controller: emailController,
+                controller: nameController,
                 validator: (val) => val!.nameValidator(val),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 4, top: 16),
+                child: Text("email".tr(), style: lightGrey13W400),
+              ),
+              CustomTextField(
+                controller: emailController,
+                validator: (val) => val!.emailValidator(val),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 4, top: 16),
+                child: Text("phone number".tr(), style: lightGrey13W400),
+              ),
+              CustomTextField(
+                controller: phoneController,
+                validator: (val) => val!.phoneValidator(val),
               ),
               Padding(
                 padding: EdgeInsets.only(top: 16.h, bottom: 4),
@@ -59,6 +79,15 @@ class LoginScreen extends StatelessWidget {
                 validator: (val) => val!.passwordValidator(val),
               ),
               Padding(
+                padding: EdgeInsets.only(top: 16.h, bottom: 4),
+                child: Text("confirm password".tr(), style: lightGrey13W400),
+              ),
+              CustomPasswordTextField(
+                controller: confirmPasswordController,
+                validator: (val) =>
+                    val!.confirmPasswordValidator(val, passwordController.text),
+              ),
+              Padding(
                 padding: EdgeInsets.only(top: 41.h, bottom: 16.h),
                 child: BlocBuilder<LoginCubit, BaseCubitState>(
                   builder: (context, state) {
@@ -67,9 +96,11 @@ class LoginScreen extends StatelessWidget {
                     }
                     return CustomElevatedButton(
                         onTap: () {
-                          if (formKey.currentState!.validate()) {}
+                          if (formKey.currentState!.validate()) {
+                            // Handle sign up logic
+                          }
                         },
-                        buttonText: 'login');
+                        buttonText: 'sign up');
                   },
                 ),
               ),
@@ -77,13 +108,14 @@ class LoginScreen extends StatelessWidget {
                 color: AppColors.whiteColor,
                 borderColor: AppColors.borderColor,
                 widget: Text(
-                  "dont have an account".tr(),
+                  "already have account".tr(),
                   style: grey13W400,
                 ),
                 onTap: () {
-                  AppNavigation.navigateReplacement(SignUpScreen());
+                  AppNavigation.navigateReplacement(LoginScreen());
                 },
-              )
+              ),
+              const SizedBox(height: 20),
             ],
           ),
         ),
