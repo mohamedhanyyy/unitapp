@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:unit/modules/auth/cubit/sign_up_cubit.dart';
 import 'package:unit/modules/home/presentation/screens/home_screen.dart';
+import 'package:unit/modules/orders/cubit/orders_cubit.dart';
 import 'package:unit/services/navigation/navigation.dart';
 import 'package:unit/shared/functions/general_functions.dart';
 import 'package:unit/shared/themes/app_theme.dart';
@@ -25,6 +26,7 @@ class UnitApp extends StatelessWidget {
             providers: [
               BlocProvider(create: (context) => LoginCubit()),
               BlocProvider(create: (context) => SignUpCubit()),
+              BlocProvider<OrdersCubit>(create: (context) => OrdersCubit()),
             ],
             child: MaterialApp(
               theme: AppThemes.whiteTheme,
@@ -33,7 +35,7 @@ class UnitApp extends StatelessWidget {
               supportedLocales: context.supportedLocales,
               locale: context.locale,
               navigatorKey: AppNavigation.navigatorKey,
-              home: HomeScrren(),
+              home: const HomeScrren(),
             ),
           ),
         );

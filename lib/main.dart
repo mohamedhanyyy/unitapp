@@ -4,6 +4,7 @@ import 'package:get_it/get_it.dart';
 import 'package:unit/modules/auth/cubit/login_cubit.dart';
 import 'package:unit/modules/auth/cubit/sign_up_cubit.dart';
 import 'package:unit/modules/auth/repository/auth_repository.dart';
+import 'package:unit/modules/orders/cubit/orders_cubit.dart';
 import 'package:unit/services/dio_helper/dio_helper.dart';
 import 'package:unit/services/shared_preferences/preferences_helper.dart';
 import 'package:unit/shared/functions/general_functions.dart';
@@ -20,6 +21,9 @@ void registerObjects() {
   //register cubit
   getIt.registerSingleton<LoginCubit>(LoginCubit());
   getIt.registerSingleton<SignUpCubit>(SignUpCubit());
+  getIt.registerSingleton<OrdersCubit>(OrdersCubit());
+
+
 }
 
 void main() {
