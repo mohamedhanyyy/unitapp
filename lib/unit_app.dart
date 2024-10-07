@@ -22,11 +22,13 @@ class UnitApp extends StatelessWidget {
       builder: (context, _) {
         return GestureDetector(
           onTap: GeneralFunctions.hideKeyboard,
+
           child: MultiBlocProvider(
             providers: [
               BlocProvider(create: (context) => LoginCubit()),
               BlocProvider(create: (context) => SignUpCubit()),
               BlocProvider<OrdersCubit>(create: (context) => OrdersCubit()),
+
             ],
             child: MaterialApp(
               theme: AppThemes.whiteTheme,

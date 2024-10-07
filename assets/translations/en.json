@@ -19,6 +19,8 @@
   "password must be at least 8 characters, include letters and numbers": "Password must be at least 8 characters, include letters and numbers",
   "confirm password is required": "Confirm password is required",
   "passwords do not match": "Passwords do not match",
+  "phone": "Phone",
+
 
   "////////////////////////////////////////": "////////////////////////////////////////",
 
@@ -35,5 +37,10 @@
   "language": "Language",
   "contact us": "Contact us",
   "my units": "My units",
-  "my tour requests": "My tour requests"
+  "my tour requests": "My tour requests",
+  "whatsapp": "Whats App",
+  "verified date": "Verified date",
+  "tour date:": "Tour date:",
+  "send order date": "Send order date:",
+  "unit": "Unit"
 }

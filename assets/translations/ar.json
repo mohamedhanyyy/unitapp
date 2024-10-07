@@ -19,6 +19,7 @@
   "password must be at least 8 characters, include letters and numbers": "يجب أن تحتوي كلمة المرور على 8 أحرف على الأقل، وتشمل أحرفًا وأرقامًا",
   "confirm password is required": "تأكيد كلمة المرور مطلوب",
   "passwords do not match": "كلمات المرور غير متطابقة",
+  "phone": "الهاتف",
 
 
   "////////////////////////////////////////": "////////////////////////////////////////",
@@ -36,7 +37,12 @@
   "language": "اللغة",
   "contact us": "تواصل معنا",
   "my units": "وحداتي",
-  "my tour requests": "طلبات جولاتي"
+  "my tour requests": "طلبات جولاتي",
+  "whatsapp": "واتس اب",
+  "verified date": "الموعد المحقق",
+  "tour date:": "موعد الجولة:",
+  "send order date": "تاريخ ارسال الطلب:",
+  "unit": "وحدة"
 
 
 }

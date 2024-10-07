@@ -12,20 +12,6 @@ import 'package:unit/unit_app.dart';
 
 import 'shared/functions/restart_app.dart';
 
-void registerObjects() {
-  final getIt = GetIt.instance;
-
-  //register repository
-  getIt.registerSingleton<AuthRepository>(AuthRepository());
-
-  //register cubit
-  getIt.registerSingleton<LoginCubit>(LoginCubit());
-  getIt.registerSingleton<SignUpCubit>(SignUpCubit());
-  getIt.registerSingleton<OrdersCubit>(OrdersCubit());
-
-
-}
-
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   DioHelper.init();
@@ -42,4 +28,16 @@ void main() {
       ),
     );
   });
+}
+
+void registerObjects() {
+  final getIt = GetIt.instance;
+
+  //register repository
+  getIt.registerSingleton<AuthRepository>(AuthRepository());
+
+  //register cubit
+  getIt.registerSingleton<LoginCubit>(LoginCubit());
+  getIt.registerSingleton<SignUpCubit>(SignUpCubit());
+  getIt.registerSingleton<OrdersCubit>(OrdersCubit());
 }
