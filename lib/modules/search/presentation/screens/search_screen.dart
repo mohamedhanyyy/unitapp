@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -37,7 +38,8 @@ class _SearchScreenState extends State<SearchScreen> {
                       children: [
                         SvgPicture.asset(AppIcons.menuHome),
                         const Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 5),
+                          padding:
+                              EdgeInsetsDirectional.only(start: 5, end: 10),
                           child: Text(
                             "القائمة",
                             style: lightGrey12W400,

@@ -25,4 +25,7 @@ class AppIcons {
   static const String save = '$_imageBase/save.svg';
   static const String square = '$_imageBase/square.svg';
   static const String whatsapp = '$_imageBase/whatsapp.svg';
+  static const String details1 = '$_imageBase/details1.svg';
+  static const String details2 = '$_imageBase/details2.svg';
+  static const String details3 = '$_imageBase/details3.svg';
 }

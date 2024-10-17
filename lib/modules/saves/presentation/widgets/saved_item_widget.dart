@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../core/resources/colors.dart';
 import '../../../../core/resources/icons.dart';
 import '../../../../shared/widgets/custom_button.dart';
+import '../../../../shared/widgets/house_info.dart';
 
 class SavedItemWidget extends StatelessWidget {
   const SavedItemWidget({super.key});
@@ -45,25 +46,7 @@ class SavedItemWidget extends StatelessWidget {
               ],
             ),
           ),
-          Row(
-            children: [
-              SvgPicture.asset(AppIcons.square),
-              const SizedBox(width: 5),
-              const Text('800 sqFt.'),
-              const SizedBox(width: 15),
-              SvgPicture.asset(AppIcons.laddar),
-              const SizedBox(width: 5),
-              const Text('5'),
-              const SizedBox(width: 15),
-              SvgPicture.asset(AppIcons.bedroom),
-              const SizedBox(width: 5),
-              const Text('2'),
-              const SizedBox(width: 15),
-              SvgPicture.asset(AppIcons.bathroom),
-              const SizedBox(width: 5),
-              const Text('5'),
-            ],
-          ),
+          const HouseInfo(laddar: 2,bathroom: 3,bedroom: 4,square: 800),
           Padding(
             padding: const EdgeInsets.only(top: 8.0),
             child: Row(
