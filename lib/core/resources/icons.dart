@@ -1,10 +1,12 @@
 class AppIcons {
   static const String _imageBase = 'assets/icons';
   static const String menu = '$_imageBase/menu.svg';
+  static const String menuHome = '$_imageBase/menuHome.svg';
   static const String orders = '$_imageBase/orders.svg';
   static const String orderOpen = '$_imageBase/orderOpen.svg';
   static const String savings = '$_imageBase/savings.svg';
   static const String search = '$_imageBase/search.svg';
+  static const String homeSearch = '$_imageBase/homeSearch.svg';
   static const String profileArrow = '$_imageBase/profileArrow.svg';
 
   static const String alarm = '$_imageBase/alarm.svg';
