@@ -22,6 +22,7 @@ void main() {
     runApp(
       EasyLocalization(
         supportedLocales: const [Locale('ar'), Locale('en')],
+        // startLocale: Locale('eb'),
         startLocale: Locale(PreferencesHelper.getLang),
         path: 'assets/translations',
         child: const RestartWidget(child: UnitApp()),

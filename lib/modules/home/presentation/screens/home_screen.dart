@@ -22,9 +22,9 @@ class _HomeScrrenState extends State<HomeScrren> {
   int _selectedItem = 0;
 
   final List<Widget> _pages = [
-      const SearchScreen(),
-      OrdersScreen(),
-      SavesScreen(),
+    const SearchScreen(),
+    OrdersScreen(),
+    SavesScreen(),
     const MoreScreen(),
   ];
 
@@ -45,9 +45,12 @@ class _HomeScrrenState extends State<HomeScrren> {
             BottomNavigationBarItem(
                 icon: SvgPicture.asset(AppIcons.search), label: 'search'.tr()),
             BottomNavigationBarItem(
-                icon: SvgPicture.asset(AppIcons.orders), label: 'orders'.tr()),
+                icon: SvgPicture.asset(
+                    _selectedItem == 1 ? AppIcons.orderOpen : AppIcons.orders),
+                label: 'orders'.tr()),
             BottomNavigationBarItem(
-                icon: SvgPicture.asset(AppIcons.savings),
+                icon: SvgPicture.asset(
+                    _selectedItem == 2 ? AppIcons.save : AppIcons.savings),
                 label: 'savings'.tr()),
             BottomNavigationBarItem(
                 icon: SvgPicture.asset(AppIcons.menu), label: 'more'.tr()),

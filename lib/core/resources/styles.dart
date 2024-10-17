@@ -21,12 +21,12 @@ const primary12W400 = TextStyle(
   color: AppColors.primaryColor,
   fontWeight: FontWeight.w400,
   fontSize: 12,
-);const primary10W400 = TextStyle(
+);
+const primary10W400 = TextStyle(
   color: AppColors.primaryColor,
   fontWeight: FontWeight.w400,
   fontSize: 12,
 );
-
 
 const lightGrey12W400 = TextStyle(
   color: AppColors.lightGrey,
@@ -71,4 +71,65 @@ const blue8w400 = TextStyle(
   color: AppColors.blue,
   fontWeight: FontWeight.w400,
   fontSize: 8,
+);
+
+const black10W400 = TextStyle(
+  color: AppColors.blackColor,
+  fontWeight: FontWeight.w400,
+  fontSize: 10,
+);
+const black12W400 = TextStyle(
+  color: AppColors.blackColor,
+  fontWeight: FontWeight.w400,
+  fontSize: 12,
+);
+
+const black14W400 = TextStyle(
+  color: AppColors.blackColor,
+  fontWeight: FontWeight.w400,
+  fontSize: 14,
+);
+
+const black16W400 = TextStyle(
+  color: AppColors.blackColor,
+  fontWeight: FontWeight.w400,
+  fontSize: 16,
+);
+
+const black18W400 = TextStyle(
+  color: AppColors.blackColor,
+  fontWeight: FontWeight.w400,
+  fontSize: 18,
+);
+
+const black10W500 = TextStyle(
+    color: AppColors.blackColor,
+    fontWeight: FontWeight.w500,
+    fontSize: 10,
+    fontFamily: '29ltbukrabold');
+
+const black12W500 = TextStyle(
+  color: AppColors.blackColor,
+  fontWeight: FontWeight.w500,
+  fontSize: 12,
+);
+
+const black14W500 = TextStyle(
+  color: AppColors.blackColor,
+  fontWeight: FontWeight.w500,
+  fontSize: 14,
+  fontFamily: '29ltbukrabold',
+
+);
+
+const black16W500 = TextStyle(
+  color: AppColors.blackColor,
+  fontWeight: FontWeight.w500,
+  fontSize: 16,
+);
+
+const black18W500 = TextStyle(
+  color: AppColors.blackColor,
+  fontWeight: FontWeight.w500,
+  fontSize: 18,
 );

@@ -14,6 +14,7 @@ class CustomElevatedButton extends StatelessWidget {
   final double? borderRadius;
   final Color? fontColor;
   final double? fontSize;
+  final double? height;
   final Widget? widget;
   final double? padding;
   final Color? color;
@@ -26,6 +27,7 @@ class CustomElevatedButton extends StatelessWidget {
     this.borderRadius,
     this.fontColor,
     this.widget,
+    this.height,
     this.borderColor,
     this.padding,
     this.fontSize,
@@ -41,7 +43,7 @@ class CustomElevatedButton extends StatelessWidget {
           onTap();
         },
         style: ElevatedButton.styleFrom(
-          minimumSize: Size.fromHeight(48.h),
+          minimumSize: Size.fromHeight(height??48.h),
           elevation: 0,
           backgroundColor: color ?? AppColors.primaryColor,
           shape: RoundedRectangleBorder(
@@ -51,7 +53,10 @@ class CustomElevatedButton extends StatelessWidget {
         ),
         child: widget ??
             Text(buttonText!.tr(),
-                textAlign: TextAlign.center, style: customButtonTextStyle),
+                textAlign: TextAlign.center, style: customButtonTextStyle.copyWith(
+                  color: fontColor,
+                  fontSize: fontSize
+                )),
       ),
     );
   }
