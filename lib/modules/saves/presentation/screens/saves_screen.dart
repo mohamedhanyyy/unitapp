@@ -41,7 +41,7 @@ class _SavesScreenState extends State<SavesScreen> {
                 padding: EdgeInsets.symmetric(vertical: 10),
                 child: SavedItemWidget(),
               ),
-              SavedItemWidget(),
+              const SavedItemWidget(),
 
             ],
           ),

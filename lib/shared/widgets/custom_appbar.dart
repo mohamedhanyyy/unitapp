@@ -1,21 +1,36 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+
+import '../../core/resources/colors.dart';
+import '../../core/resources/icons.dart';
 
 class CustomAppbar extends StatelessWidget {
-  const CustomAppbar({super.key,required this.text});
 
-  final String text;
+ final   String text;
+
+    const CustomAppbar(this.text, {super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Color(0xffF9F7F7),
-      ),
-      child: Row(
-        children: [
-          // Text(text,style: ,)
-        ],
-      ),
-    );
+    return AppBar(
+        backgroundColor: const Color(0xffF9F7F7),
+        elevation: 0,
+        leadingWidth: 150,
+        leading: Row(
+          children: [
+            Padding(
+              padding: const EdgeInsetsDirectional.fromSTEB(20, 0, 10, 0),
+              child: SvgPicture.asset(AppIcons.backButton),
+            ),
+            Text(
+              text.tr(),
+              style: const TextStyle(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w400,
+                  color: AppColors.lightGrey),
+            )
+          ],
+        ));
   }
 }

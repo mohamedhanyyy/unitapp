@@ -32,7 +32,9 @@ class AppIcons {
   static const String date = '$_imageBase/date.svg';
   static const String money = '$_imageBase/money.svg';
   static const String aqarTax = '$_imageBase/aqarTax.svg';
+  static const String backButton = '$_imageBase/backButton.svg';
   static const String saee = '$_imageBase/saee.svg';
   static const String unitPrice = '$_imageBase/unitPrice.svg';
   static const String unitStatus = '$_imageBase/date.svg';
+  static const String radio = '$_imageBase/radio.svg';
 }

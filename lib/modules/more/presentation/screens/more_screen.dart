@@ -3,6 +3,7 @@ import 'package:unit/core/resources/images.dart';
 import 'package:unit/modules/more/presentation/widgets/profile_item_widget.dart';
 
 import '../../../../core/resources/icons.dart';
+import 'notifications_screen.dart';
 
 class MoreScreen extends StatelessWidget {
   const MoreScreen({super.key});
@@ -18,7 +19,7 @@ class MoreScreen extends StatelessWidget {
               fit: BoxFit.fill, width: double.infinity),
           const SizedBox(height: 15),
           const ProfileItemWidget(
-              name: 'notifications', icon: AppIcons.alarm, page: Text("")),
+              name: 'notifications', icon: AppIcons.alarm, page: NotificationsScreen()),
           const ProfileItemWidget(
               name: 'profile', icon: AppIcons.profile, page: Text("")),
           const ProfileItemWidget(

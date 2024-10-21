@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:unit/core/resources/styles.dart';
+import 'package:unit/shared/widgets/custom_button.dart';
 import '../../../../core/resources/colors.dart';
 import '../../../../core/resources/icons.dart';
 import '../../../../shared/widgets/custom_divider.dart';
@@ -37,13 +38,13 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                     children: [
                       Text(
                         "21 وحدة",
-                        style:
-                            TextStyle(fontWeight: FontWeight.w700, fontSize: 13),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700, fontSize: 13),
                       ),
                       Text(
                         "SAR 60.000",
-                        style:
-                            TextStyle(fontWeight: FontWeight.w700, fontSize: 14),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700, fontSize: 14),
                       ),
                     ],
                   ),
@@ -53,7 +54,6 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                     padding: const EdgeInsets.symmetric(horizontal: 21),
                     child: SvgPicture.asset(AppIcons.details2),
                   ),
-        
                   SvgPicture.asset(AppIcons.details3),
                 ],
               ),
@@ -62,7 +62,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: HouseInfo(laddar: 2, bathroom: 3, bedroom: 4, square: 800),
             ),
-            BlueDivider(),
+            const BlueDivider(),
             Container(
               height: 35,
               margin: const EdgeInsets.only(left: 20, right: 20, bottom: 24),
@@ -103,11 +103,27 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
               ),
             ),
             if (selectedIndex == 0)
-              UnitDetailsWidget()
+              const UnitDetailsWidget()
             else if (selectedIndex == 1)
-              UnitLocationWidget()
+              const UnitLocationWidget()
             else if (selectedIndex == 2)
-              UnitFinancialDetailsWidget()
+              const UnitFinancialDetailsWidget(),
+            Padding(
+              padding: const EdgeInsets.only(left: 20,right: 20,bottom: 50,top: 20),
+              child: Row(
+                children: [
+                  Flexible(
+                      child: CustomElevatedButton(
+                          onTap: () {}, buttonText: 'تملك الان')),
+                  const SizedBox(width: 16),
+                  Flexible(
+                      child: CustomElevatedButton(
+                        color: AppColors.whiteColor,
+                          fontColor: AppColors.primaryColor,
+                          onTap: () {}, buttonText: 'طلب جولة')),
+                ],
+              ),
+            )
           ],
         ),
       ),

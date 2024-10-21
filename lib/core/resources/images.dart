@@ -3,5 +3,6 @@ class AppImages {
   static const String appLogo = '$_imageBase/logo.png';
   static const String home = '$_imageBase/home.png';
   static const String house = '$_imageBase/house.png';
+  static const String mapLocation = '$_imageBase/mapLocation.png';
   static const String cover = '$_imageBase/cover.png';
 }
