@@ -118,7 +118,6 @@ const black14W500 = TextStyle(
   color: AppColors.blackColor,
   fontWeight: FontWeight.w500,
   fontSize: 14,
-  fontFamily: '29ltbukrabold',
 
 );
 

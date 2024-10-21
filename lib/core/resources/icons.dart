@@ -28,4 +28,11 @@ class AppIcons {
   static const String details1 = '$_imageBase/details1.svg';
   static const String details2 = '$_imageBase/details2.svg';
   static const String details3 = '$_imageBase/details3.svg';
+  static const String city = '$_imageBase/city.svg';
+  static const String date = '$_imageBase/date.svg';
+  static const String money = '$_imageBase/money.svg';
+  static const String aqarTax = '$_imageBase/aqarTax.svg';
+  static const String saee = '$_imageBase/saee.svg';
+  static const String unitPrice = '$_imageBase/unitPrice.svg';
+  static const String unitStatus = '$_imageBase/date.svg';
 }
