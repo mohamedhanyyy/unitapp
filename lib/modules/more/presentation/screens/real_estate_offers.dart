@@ -16,7 +16,7 @@ class RealEstateOffers extends StatelessWidget {
       child: Scaffold(
         appBar: const PreferredSize(
             preferredSize: Size(double.infinity, 46),
-            child: CustomAppbar('تواصل معنا')),
+            child: CustomAppbar('عروض الوحدة العقارية')),
         body: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(

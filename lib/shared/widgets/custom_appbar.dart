@@ -7,17 +7,16 @@ import '../../core/resources/colors.dart';
 import '../../core/resources/icons.dart';
 
 class CustomAppbar extends StatelessWidget {
+  final String text;
 
- final   String text;
-
-    const CustomAppbar(this.text, {super.key});
+  const CustomAppbar(this.text, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
         backgroundColor: const Color(0xffF9F7F7),
         elevation: 0,
-        leadingWidth: 150,
+        leadingWidth: 200,
         leading: Row(
           children: [
             GestureDetector(

@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:unit/core/resources/images.dart';
 import 'package:unit/modules/more/presentation/screens/contact_us_screen.dart';
+import 'package:unit/modules/more/presentation/screens/privacy_screen.dart';
 import 'package:unit/modules/more/presentation/screens/real_estate_offers.dart';
 import 'package:unit/modules/more/presentation/widgets/profile_item_widget.dart';
 
 import '../../../../core/resources/icons.dart';
+import '../widgets/language_widget.dart';
+import 'about_unit_state.dart';
 import 'notifications_screen.dart';
 
 class MoreScreen extends StatelessWidget {
@@ -27,17 +30,17 @@ class MoreScreen extends StatelessWidget {
           const ProfileItemWidget(
               name: 'about real estate unit',
               icon: AppIcons.estate,
-              page: Text("")),
+              page: AboutUnitState()),
           const ProfileItemWidget(
               name: 'about real estate offers',
               icon: AppIcons.star,
               page: RealEstateOffers()),
           const ProfileItemWidget(
-              name: 'privacy policy usage', icon: AppIcons.ask, page: Text("")),
+              name: 'privacy policy usage', icon: AppIcons.ask, page:PrivacyScreen()),
           const ProfileItemWidget(
               name: 'apperance', icon: AppIcons.apperance, page: Text("")),
-          const ProfileItemWidget(
-              name: 'language', icon: AppIcons.lang, page: Text("")),
+          const ProfileBottomSheetWidget(
+              name: 'language', icon: AppIcons.lang, page: LanguageWidget()),
             ProfileItemWidget(
               name: 'contact us', icon: AppIcons.policy, page:ContactUsScreen()),
         ],

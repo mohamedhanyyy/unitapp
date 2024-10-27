@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -19,7 +20,7 @@ class _SearchScreenState extends State<SearchScreen> {
   final mapController = Completer<GoogleMapController>();
   final controller = TextEditingController();
   int selectedCatIndex = 0;
-  final catList = ['الدوبلكس', 'المنازل', 'الفلل', 'التاون هاوس'];
+  final catList = ['Dublex', 'Homes', 'Villas', 'Town house'];
 
   @override
   Widget build(BuildContext context) {
@@ -32,15 +33,15 @@ class _SearchScreenState extends State<SearchScreen> {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 23.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 23),
                     child: Row(
                       children: [
                         SvgPicture.asset(AppIcons.menuHome),
-                        const Padding(
-                          padding:
-                              EdgeInsetsDirectional.only(start: 5, end: 10),
+                        Padding(
+                          padding: const EdgeInsetsDirectional.only(
+                              start: 5, end: 10),
                           child: Text(
-                            "القائمة",
+                            "menu".tr(),
                             style: lightGrey12W400,
                           ),
                         ),
@@ -51,7 +52,7 @@ class _SearchScreenState extends State<SearchScreen> {
                           hintColor: AppColors.greyProfileText,
                           borderRadius: 20,
                           controller: controller,
-                          hintText: 'المدينة, نوع العقار, اسم المشروع ',
+                          hintText: 'City, property type, project name',
                           prefixIcon: AppIcons.homeSearch,
                         ))
                       ],
@@ -84,7 +85,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                         color: AppColors.greyTextField)),
                                 child: Center(
                                     child: Text(
-                                  e,
+                                  e.tr(),
                                   style: TextStyle(
                                       color:
                                           catList.elementAt(selectedCatIndex) ==

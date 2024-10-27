@@ -36,7 +36,7 @@ class _SavesScreenState extends State<SavesScreen> {
                   prefixIcon: AppIcons.estate,
                 ),
               ),
-              const SavedItemWidget(),
+              SavedItemWidget(),
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 10),
                 child: SavedItemWidget(),

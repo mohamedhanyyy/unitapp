@@ -28,8 +28,8 @@
   "orders": "Orders",
   "savings": "Savings",
   "more": "More",
-  "notifications": "notifications",
-  "profile": "profile",
+  "notifications": "Notifications",
+  "profile": "Profile",
   "about real estate unit": "About real estate unit",
   "about real estate offers": "About real estate offers",
   "privacy policy usage": "Privacy policy usage",
@@ -42,5 +42,11 @@
   "verified date": "Verified date",
   "tour date:": "Tour date:",
   "send order date": "Send order date:",
-  "unit": "Unit"
-}
+  "unit": "Unit",
+  "menu": "Menu",
+  "City, property type, project name": "City, property type, project name",
+  "Dublex": "Dublex",
+  "Homes": "Homes",
+  "Villas": "Villas",
+  "Town house": "Town house"
+ }

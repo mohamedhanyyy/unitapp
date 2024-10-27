@@ -42,7 +42,13 @@
   "verified date": "الموعد المحقق",
   "tour date:": "موعد الجولة:",
   "send order date": "تاريخ ارسال الطلب:",
-  "unit": "وحدة"
+  "unit": "وحدة",
+  "menu": "القائمة",
+  "City, property type, project name": "المدينة, نوع العقار, اسم المشروع",
+  "Dublex": "الدوبلكس",
+  "Homes": "المنازل",
+  "Villas": "الفلل",
+  "Town house": "تاون هاوس"
 
 
 }
