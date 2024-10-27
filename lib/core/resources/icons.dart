@@ -37,4 +37,5 @@ class AppIcons {
   static const String unitPrice = '$_imageBase/unitPrice.svg';
   static const String unitStatus = '$_imageBase/date.svg';
   static const String radio = '$_imageBase/radio.svg';
+  static const String dot = '$_imageBase/dot.svg';
 }

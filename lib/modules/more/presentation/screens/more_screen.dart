@@ -18,7 +18,7 @@ class MoreScreen extends StatelessWidget {
           Image.asset(AppImages.cover,
               fit: BoxFit.fill, width: double.infinity),
           const SizedBox(height: 15),
-          const ProfileItemWidget(
+            ProfileItemWidget(
               name: 'notifications', icon: AppIcons.alarm, page: NotificationsScreen()),
           const ProfileItemWidget(
               name: 'profile', icon: AppIcons.profile, page: Text("")),
