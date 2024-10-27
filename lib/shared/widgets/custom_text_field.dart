@@ -9,6 +9,7 @@ class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
   final String? hintText;
   final Color? hintColor;
+  final int? maxLines;
   final Color fillColor;
   final Color borderColor;
   final String? prefixIcon;
@@ -24,7 +25,8 @@ class CustomTextField extends StatelessWidget {
     super.key,
     required this.controller,
     this.hintText,
-    this.borderRadius=6,
+    this.maxLines,
+    this.borderRadius = 6,
     this.hintColor,
     this.hintFontSize,
     this.fillColor = Colors.white,
@@ -40,16 +42,15 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      maxLines: maxLines,
       controller: controller,
       keyboardType: keyboardType,
       textInputAction: textInputAction,
       decoration: InputDecoration(
         hintText: hintText?.tr(),
         contentPadding: EdgeInsets.zero,
-        hintStyle: lightGrey15W400.copyWith(
-          color: hintColor,
-          fontSize: hintFontSize
-        ),
+        hintStyle:
+            lightGrey15W400.copyWith(color: hintColor, fontSize: hintFontSize),
         labelStyle: lightGrey15W400,
         fillColor: fillColor,
         prefixIconConstraints: const BoxConstraints(),

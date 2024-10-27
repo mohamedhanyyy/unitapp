@@ -29,6 +29,7 @@ class NotificationsScreen extends StatelessWidget {
                   hintText: 'بحث',
                   prefixIcon: AppIcons.homeSearch,
                   borderRadius: 20,
+
                 ),
               ),
               ListView.builder(

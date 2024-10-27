@@ -24,7 +24,7 @@ class _HomeScrrenState extends State<HomeScrren> {
   final List<Widget> _pages = [
     const SearchScreen(),
     OrdersScreen(),
-    SavesScreen(),
+    const SavesScreen(),
     const MoreScreen(),
   ];
 

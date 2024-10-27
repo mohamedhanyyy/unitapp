@@ -17,7 +17,7 @@ class OrderItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        AppNavigation.navigate(OrderDetailsScreen());
+        AppNavigation.navigate(const OrderDetailsScreen());
       },
       child: Card(
         elevation: 0,
@@ -132,7 +132,7 @@ class OrderItemWidget extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SvgPicture.asset(AppIcons.whatsapp),
-                          SizedBox(width: 10),
+                          const SizedBox(width: 10),
                           Text("whatsapp".tr(), style: primary10W400),
                         ],
                       ),

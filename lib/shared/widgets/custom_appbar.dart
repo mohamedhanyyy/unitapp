@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:unit/services/navigation/navigation.dart';
 
 import '../../core/resources/colors.dart';
 import '../../core/resources/icons.dart';
@@ -19,9 +20,14 @@ class CustomAppbar extends StatelessWidget {
         leadingWidth: 150,
         leading: Row(
           children: [
-            Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(20, 0, 10, 0),
-              child: SvgPicture.asset(AppIcons.backButton),
+            GestureDetector(
+              onTap: () {
+                AppNavigation.pop();
+              },
+              child: Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(20, 0, 10, 0),
+                child: SvgPicture.asset(AppIcons.backButton),
+              ),
             ),
             Text(
               text.tr(),

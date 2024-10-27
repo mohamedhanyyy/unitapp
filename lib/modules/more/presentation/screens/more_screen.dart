@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:unit/core/resources/images.dart';
+import 'package:unit/modules/more/presentation/screens/contact_us_screen.dart';
+import 'package:unit/modules/more/presentation/screens/real_estate_offers.dart';
 import 'package:unit/modules/more/presentation/widgets/profile_item_widget.dart';
 
 import '../../../../core/resources/icons.dart';
@@ -29,15 +31,15 @@ class MoreScreen extends StatelessWidget {
           const ProfileItemWidget(
               name: 'about real estate offers',
               icon: AppIcons.star,
-              page: Text("")),
+              page: RealEstateOffers()),
           const ProfileItemWidget(
               name: 'privacy policy usage', icon: AppIcons.ask, page: Text("")),
           const ProfileItemWidget(
               name: 'apperance', icon: AppIcons.apperance, page: Text("")),
           const ProfileItemWidget(
               name: 'language', icon: AppIcons.lang, page: Text("")),
-          const ProfileItemWidget(
-              name: 'contact us', icon: AppIcons.policy, page: Text("")),
+            ProfileItemWidget(
+              name: 'contact us', icon: AppIcons.policy, page:ContactUsScreen()),
         ],
       ),
     );
