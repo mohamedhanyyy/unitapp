@@ -19,23 +19,22 @@ class ProfileItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         AppNavigation.navigate(page);
       },
       child: Column(
         children: [
           ListTile(
-            leading: SvgPicture.asset(icon),
+            leading: SvgPicture.asset(icon,color: AppColors.getBackgroundColor,),
             title: Text(
               name.tr(),
-              style:
-                  const TextStyle(color: AppColors.greyProfileText, fontSize: 14),
+              style:   TextStyle(
+                  color: AppColors.getGreyTextColor, fontSize: 14),
             ),
-            trailing:
-
-
-            RotatedBox(quarterTurns: context.isCurrentEnglish?2:0,
-            child: SvgPicture.asset(AppIcons.profileArrow)),
+            trailing: RotatedBox(
+                quarterTurns: context.isCurrentEnglish ? 2 : 0,
+                child: SvgPicture.asset(AppIcons.profileArrow,
+                color: AppColors.getBackgroundColor,)),
           ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 5),
@@ -46,7 +45,6 @@ class ProfileItemWidget extends StatelessWidget {
     );
   }
 }
-
 
 class ProfileBottomSheetWidget extends StatelessWidget {
   const ProfileBottomSheetWidget(
@@ -59,25 +57,28 @@ class ProfileBottomSheetWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
-        showModalBottomSheet(context: context, builder: (context)=>page,
-        isScrollControlled: true,
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          builder: (context) => page,
+          isScrollControlled: true,
           isDismissible: true,
           showDragHandle: true,
         );
-       },
+      },
       child: Column(
         children: [
           ListTile(
-            leading: SvgPicture.asset(icon),
+
+            leading: SvgPicture.asset(icon,color: AppColors.getBackgroundColor,),
             title: Text(
               name.tr(),
-              style:
-              const TextStyle(color: AppColors.greyProfileText, fontSize: 14),
+              style:   TextStyle(
+                  color: AppColors.getGreyTextColor, fontSize: 14),
             ),
             trailing: RotatedBox(
-                quarterTurns: context.isCurrentEnglish?2:0,
-                child: SvgPicture.asset(AppIcons.profileArrow)),
+                quarterTurns: context.isCurrentEnglish ? 2 : 0,
+                child: SvgPicture.asset(AppIcons.profileArrow,color: AppColors.getBackgroundColor,)),
           ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 5),

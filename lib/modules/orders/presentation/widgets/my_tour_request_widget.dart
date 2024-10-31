@@ -53,7 +53,7 @@ class _MyTourRequestwidgetState extends State<MyTourRequestwidget> {
                         style: TextStyle(
                           color: selectedIndex == index
                               ? AppColors.whiteColor
-                              : AppColors.greyProfileText,
+                              : AppColors.getGreyTextColor,
                         ),
                       ),
                     ),

@@ -48,10 +48,12 @@ class OrdersScreen extends StatelessWidget {
                         style: ordersCubit.mainCatIndex == 1
                             ? primary12W400
                             : lightGrey12W400,
+                        textAlign: TextAlign.center,
                       ),
+
                     ),
                   ),
-                  const SizedBox(width: 20),
+                  // const SizedBox(width: 20),
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () {

@@ -44,7 +44,7 @@ class _MyUnitsWidgetState extends State<MyUnitsWidget> {
                     style: TextStyle(
                       color: selectedIndex == index
                           ? AppColors.whiteColor
-                          : AppColors.greyProfileText,
+                          : AppColors.getGreyTextColor,
                     ),
                   ),
                 ),

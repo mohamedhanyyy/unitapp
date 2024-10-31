@@ -30,6 +30,7 @@
   "more": "More",
   "notifications": "Notifications",
   "profile": "Profile",
+  "now": "Now",
   "about real estate unit": "About real estate unit",
   "about real estate offers": "About real estate offers",
   "privacy policy usage": "Privacy policy usage",
@@ -48,5 +49,9 @@
   "Dublex": "Dublex",
   "Homes": "Homes",
   "Villas": "Villas",
-  "Town house": "Town house"
+  "Town house": "Town house",
+  "Arabic": "Arabic",
+  "English": "English",
+  "real estate offers": "Real estate offers",
+  "download offer": "Download offer"
  }

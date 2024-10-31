@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:unit/core/extensions/context_extension.dart';
 import 'package:unit/services/navigation/navigation.dart';
 
 import '../../core/resources/colors.dart';
@@ -16,7 +17,7 @@ class CustomAppbar extends StatelessWidget {
     return AppBar(
         backgroundColor: const Color(0xffF9F7F7),
         elevation: 0,
-        leadingWidth: 200,
+        leadingWidth: double.infinity,
         leading: Row(
           children: [
             GestureDetector(
@@ -25,7 +26,9 @@ class CustomAppbar extends StatelessWidget {
               },
               child: Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(20, 0, 10, 0),
-                child: SvgPicture.asset(AppIcons.backButton),
+                child: RotatedBox(
+                    quarterTurns: context.isCurrentEnglish ? 2 : 0,
+                    child: SvgPicture.asset(AppIcons.backButton)),
               ),
             ),
             Text(

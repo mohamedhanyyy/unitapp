@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:unit/core/resources/images.dart';
@@ -16,15 +17,15 @@ class RealEstateOffers extends StatelessWidget {
       child: Scaffold(
         appBar: const PreferredSize(
             preferredSize: Size(double.infinity, 46),
-            child: CustomAppbar('عروض الوحدة العقارية')),
+            child: CustomAppbar('real estate offers')),
         body: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
-                "عروض الوحدة العقارية",
-                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 14),
+                Text(
+                "real estate offers".tr(),
+                style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 14),
               ),
               const Text(
                 "يمكنك معرفة عروض المقدمة لك من خلال الوحدة العقارية بتحميل الملف المسند ",
@@ -138,13 +139,13 @@ class OfferCard extends StatelessWidget {
               child: CustomElevatedButton(
                 color: Colors.white,
                 onTap: () {},
-                buttonText: ('تحميل العرض'),
+                // buttonText: 'download offer',
                 widget: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SvgPicture.asset(AppIcons.download),
                     const SizedBox(width: 10),
-                    const Text("تحميل العرض", style: black10W400),
+                      Text("download offer".tr(), style: black10W400),
                   ],
                 ),
               ),

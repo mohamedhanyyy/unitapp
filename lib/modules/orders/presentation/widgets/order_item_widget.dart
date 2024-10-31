@@ -108,7 +108,7 @@ class OrderItemWidget extends StatelessWidget {
                   Flexible(
                     child: CustomElevatedButton(
                       height: 40,
-                      color: AppColors.whiteColor,
+                      color: Theme.of(context).cardColor,
                       borderRadius: 8,
                       onTap: () {},
                       widget: Row(
@@ -124,7 +124,7 @@ class OrderItemWidget extends StatelessWidget {
                   const SizedBox(width: 15),
                   Flexible(
                     child: CustomElevatedButton(
-                      color: AppColors.whiteColor,
+                      color: Theme.of(context).cardColor,
                       height: 40,
                       borderRadius: 8,
                       onTap: () {},

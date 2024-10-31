@@ -11,7 +11,7 @@ class AboutUnitState extends StatelessWidget {
       child: Scaffold(
         appBar: PreferredSize(
             preferredSize: Size(double.infinity, 46),
-            child: CustomAppbar('عن الوحدة العقارية')),
+            child: CustomAppbar('about real estate unit')),
         body: Padding(
           padding: EdgeInsets.all(20),
           child: Column(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:unit/services/navigation/navigation.dart';
 
 import 'colors.dart';
 
@@ -22,8 +23,8 @@ const primary12W400 = TextStyle(
   fontWeight: FontWeight.w400,
   fontSize: 12,
 );
-const primary10W400 = TextStyle(
-  color: AppColors.primaryColor,
+ final primary10W400 = TextStyle(
+  color: Theme.of(AppNavigation.context).primaryColor,
   fontWeight: FontWeight.w400,
   fontSize: 12,
 );

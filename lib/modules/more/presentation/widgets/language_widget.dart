@@ -21,7 +21,7 @@ class _LanguageWidgetState extends State<LanguageWidget> {
       children: [
         Text("language".tr()),
         RadioListTile.adaptive(
-            title: const Text("Arabic"),
+            title:   Text("Arabic".tr()),
             value: 0,
             activeColor: AppColors.primaryColor,
             groupValue: arabic,
@@ -34,7 +34,7 @@ class _LanguageWidgetState extends State<LanguageWidget> {
               AppNavigation.pop();
             }),
         RadioListTile.adaptive(
-            title: const Text("English"),
+            title:   Text("English".tr()),
             value: 1,
             activeColor: AppColors.primaryColor,
             groupValue: arabic,

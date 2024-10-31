@@ -2,8 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 
 extension StringExtenstions on String {
   emailValidator(String? value) {
-    // Regular expression for validating an email
-    const String pattern =
+     const String pattern =
         r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+\.[a-zA-Z]+";
     final RegExp regex = RegExp(pattern);
 
@@ -28,8 +27,7 @@ extension StringExtenstions on String {
   }
 
   String? nameValidator(String? value) {
-    // Ensure the name is not empty and has a reasonable length
-    if (value == null || value.isEmpty) {
+     if (value == null || value.isEmpty) {
       return 'name is required'.tr();
     } else if (value.length < 2) {
       return 'name must be at least 2 characters'.tr();
@@ -39,8 +37,7 @@ extension StringExtenstions on String {
   }
 
   String? passwordValidator(String? value) {
-    // Password must be at least 8 characters and contain letters, numbers, and special characters
-    const String pattern = r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$';
+     const String pattern = r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$';
     final RegExp regex = RegExp(pattern);
 
     if (value == null || value.isEmpty) {

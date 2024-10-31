@@ -23,10 +23,16 @@ class PreferencesHelper {
     await preferences?.setString('lang', lang);
   }
 
+  static Future<void> saveTheme({required String theme}) async {
+    await preferences?.setString('theme', theme);
+  }
   static String get getLang {
     return preferences?.getString('lang') ?? 'ar';
   }
 
+  static String get getTheme {
+    return preferences?.getString('theme') ?? 'light';
+  }
   static Future saveIsFirstOpenApp({required bool value}) async {
     await preferences?.setBool('isFirstOpenApp', value);
   }

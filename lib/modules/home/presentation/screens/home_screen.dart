@@ -33,27 +33,28 @@ class _HomeScrrenState extends State<HomeScrren> {
     return Scaffold(
         body: _pages.elementAt(_selectedItem),
         bottomNavigationBar: SnakeNavigationBar.color(
-          selectedItemColor: AppColors.primaryColor,
-          unselectedItemColor: AppColors.primaryColor,
+          selectedItemColor: AppColors.getBottomNavigationBarColor,
+          unselectedItemColor: AppColors.getBottomNavigationBarColor,
           snakeShape: SnakeShape.indicator,
           showUnselectedLabels: true,
           showSelectedLabels: true,
-          snakeViewColor: AppColors.primaryColor,
+          snakeViewColor: AppColors.getBottomNavigationBarColor,
           currentIndex: _selectedItem,
           onTap: (index) => setState(() => _selectedItem = index),
           items: [
             BottomNavigationBarItem(
-                icon: SvgPicture.asset(AppIcons.search), label: 'search'.tr()),
+                icon: SvgPicture.asset(AppIcons.search,color: AppColors.getBottomNavigationBarColor,), label: 'search'.tr()),
             BottomNavigationBarItem(
                 icon: SvgPicture.asset(
+                    color: AppColors.getBottomNavigationBarColor,
                     _selectedItem == 1 ? AppIcons.orderOpen : AppIcons.orders),
                 label: 'orders'.tr()),
             BottomNavigationBarItem(
                 icon: SvgPicture.asset(
-                    _selectedItem == 2 ? AppIcons.save : AppIcons.savings),
+                    _selectedItem == 2 ? AppIcons.save : AppIcons.savings,color: AppColors.getBottomNavigationBarColor),
                 label: 'savings'.tr()),
             BottomNavigationBarItem(
-                icon: SvgPicture.asset(AppIcons.menu), label: 'more'.tr()),
+                icon: SvgPicture.asset(AppIcons.menu,color: AppColors.getBottomNavigationBarColor), label: 'more'.tr()),
           ],
         ));
   }

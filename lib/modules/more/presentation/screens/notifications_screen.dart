@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:unit/shared/widgets/custom_text_field.dart';
@@ -16,7 +17,7 @@ class NotificationsScreen extends StatelessWidget {
       child: Scaffold(
         appBar: const PreferredSize(
             preferredSize: Size(double.infinity, 46),
-            child: CustomAppbar('الإشعارات')),
+            child: CustomAppbar('notifications')),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
@@ -26,10 +27,9 @@ class NotificationsScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 12, bottom: 8),
                 child: CustomTextField(
                   controller: controller,
-                  hintText: 'بحث',
+                  hintText: 'search',
                   prefixIcon: AppIcons.homeSearch,
                   borderRadius: 20,
-
                 ),
               ),
               ListView.builder(
@@ -63,9 +63,9 @@ class NotificationsScreen extends StatelessWidget {
                 ),
               ),
               SvgPicture.asset(AppIcons.dot),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 6),
-                child: Text("الان"),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 6),
+                child: Text("now".tr()),
               ),
             ],
           ),
