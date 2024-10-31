@@ -11,6 +11,8 @@ const lightGrey15W400 = TextStyle(
 
 const grey13W400 =
     TextStyle(color: AppColors.grey, fontWeight: FontWeight.w400, fontSize: 13);
+const grey14W400 =
+    TextStyle(color: AppColors.grey, fontWeight: FontWeight.w400, fontSize: 14);
 
 const lightGrey13W400 = TextStyle(
   color: AppColors.lightGrey,
@@ -26,6 +28,10 @@ const primary12W400 = TextStyle(
   color: AppColors.primaryColor,
   fontWeight: FontWeight.w400,
   fontSize: 12,
+);const primary14W400 = TextStyle(
+  color: AppColors.primaryColor,
+  fontWeight: FontWeight.w400,
+  fontSize: 14,
 );
  final primary10W400 = TextStyle(
   color: Theme.of(AppNavigation.context).primaryColor,

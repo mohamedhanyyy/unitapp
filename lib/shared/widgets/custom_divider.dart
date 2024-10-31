@@ -15,16 +15,19 @@ class BlueDivider extends StatelessWidget {
   }
 }
 
+
 class CustomDivider extends StatelessWidget {
-  const CustomDivider({super.key});
+
+  CustomDivider({super.key, this.indent = 10});
+   final  double indent;
 
   @override
   Widget build(BuildContext context) {
     return Divider(
         height: 10.h,
         thickness: 1,
-        endIndent: 10.w,
-        indent: 10.w,
+        endIndent: indent,
+        indent: indent,
         color: Colors.grey.withOpacity(0.3));
   }
 }

@@ -36,7 +36,7 @@ class ProfileItemWidget extends StatelessWidget {
                 child: SvgPicture.asset(AppIcons.profileArrow,
                 color: AppColors.getBackgroundColor,)),
           ),
-          const Padding(
+            Padding(
             padding: EdgeInsets.symmetric(horizontal: 5),
             child: CustomDivider(),
           ),
@@ -80,7 +80,7 @@ class ProfileBottomSheetWidget extends StatelessWidget {
                 quarterTurns: context.isCurrentEnglish ? 2 : 0,
                 child: SvgPicture.asset(AppIcons.profileArrow,color: AppColors.getBackgroundColor,)),
           ),
-          const Padding(
+            Padding(
             padding: EdgeInsets.symmetric(horizontal: 5),
             child: CustomDivider(),
           ),

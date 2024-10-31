@@ -39,4 +39,5 @@ class AppIcons {
   static const String radio = '$_imageBase/radio.svg';
   static const String download = '$_imageBase/download.svg';
   static const String dot = '$_imageBase/dot.svg';
+  static const String profileInfo = '$_imageBase/profile_info.svg';
 }

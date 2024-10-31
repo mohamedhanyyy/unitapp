@@ -5,6 +5,7 @@ import 'package:unit/modules/more/presentation/screens/privacy_screen.dart';
 import 'package:unit/modules/more/presentation/screens/real_estate_offers.dart';
 import 'package:unit/modules/more/presentation/widgets/profile_item_widget.dart';
 import 'package:unit/modules/more/presentation/widgets/theme_widget.dart';
+import 'package:unit/modules/profile/presentation/screens/profile_screen.dart';
 
 import '../../../../core/resources/icons.dart';
 import '../widgets/language_widget.dart';
@@ -29,7 +30,7 @@ class MoreScreen extends StatelessWidget {
               icon: AppIcons.alarm,
               page: NotificationsScreen()),
           const ProfileItemWidget(
-              name: 'profile', icon: AppIcons.profile, page: Text("")),
+              name: 'profile', icon: AppIcons.profile, page: ProfileScreen()),
           const ProfileItemWidget(
               name: 'about real estate unit',
               icon: AppIcons.estate,
