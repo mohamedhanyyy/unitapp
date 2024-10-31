@@ -1,8 +1,7 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:unit/modules/search/presentation/screens/map_screen.dart';
 
-import '../widgets/mark_model.dart';
+import '../widgets/home_category_widget.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -12,24 +11,19 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
-  final List<MapMarker> markers = [];
-
-  final mapController = Completer<GoogleMapController>();
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: GoogleMap(
-            initialCameraPosition: const CameraPosition(
-                target: LatLng(41.143029, -8.611274)),
-
-            onMapCreated: (controller) {
-              mapController.complete(controller);
-            },
-            onCameraMove: (position) {
-              // Update the markers for the updated position.zoom
-            }),
+    return SafeArea(
+      child: Scaffold(
+        body: SingleChildScrollView(
+          physics: const NeverScrollableScrollPhysics(),
+          child: Column(
+            children: [
+              HomeCategoryWidget(),
+              CustomMapMarkers(),
+            ],
+          ),
+        ),
       ),
     );
   }

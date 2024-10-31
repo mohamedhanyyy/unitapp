@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
@@ -15,7 +16,7 @@ class _MyUnitsWidgetState extends State<MyUnitsWidget> {
   final ordersCubit = GetIt.instance.get<OrdersCubit>();
 
   int selectedIndex = 0;
-  List<String> categories = ['الفلل', 'الدوبلكس', 'التاون هاوس'];
+  List<String> categories = ['Villas', 'Dublex', 'Town house'];
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -40,7 +41,7 @@ class _MyUnitsWidgetState extends State<MyUnitsWidget> {
                     border: Border.all(color: AppColors.grey)),
                 child: Center(
                   child: Text(
-                    categories.elementAt(index),
+                    categories.elementAt(index).tr(),
                     style: TextStyle(
                       color: selectedIndex == index
                           ? AppColors.whiteColor

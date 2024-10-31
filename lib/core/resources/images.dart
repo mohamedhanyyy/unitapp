@@ -6,4 +6,5 @@ class AppImages {
   static const String mapLocation = '$_imageBase/mapLocation.png';
   static const String cover = '$_imageBase/cover.png';
   static const String offerLogo = '$_imageBase/offerLogo.png';
+  static const String mapLogo = '$_imageBase/mapLogo.png';
 }

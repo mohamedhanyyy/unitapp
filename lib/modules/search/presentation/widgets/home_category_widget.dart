@@ -18,7 +18,7 @@ class HomeCategoryWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => CategoryCubit(),
-      child: Container(
+      child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 10),
         child: Column(
           children: [

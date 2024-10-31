@@ -16,6 +16,10 @@ const lightGrey13W400 = TextStyle(
   color: AppColors.lightGrey,
   fontWeight: FontWeight.w400,
   fontSize: 13,
+);const lightGrey13W700 = TextStyle(
+  color: AppColors.lightGrey,
+  fontWeight: FontWeight.w700,
+  fontSize: 13,
 );
 
 const primary12W400 = TextStyle(
