@@ -20,7 +20,7 @@ class _SearchScreenState extends State<SearchScreen> {
           child: Column(
             children: [
               HomeCategoryWidget(),
-              CustomMapMarkers(),
+              const CustomMapMarkers(),
             ],
           ),
         ),

@@ -1,11 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:unit/core/resources/colors.dart';
 import 'package:unit/core/resources/images.dart';
 import 'package:unit/modules/orders/presentation/screens/order_details_screen.dart';
 import 'package:unit/services/navigation/navigation.dart';
-import 'package:unit/shared/widgets/custom_button.dart';
 import 'package:unit/shared/widgets/house_info.dart';
 
 import '../../../../core/resources/icons.dart';
