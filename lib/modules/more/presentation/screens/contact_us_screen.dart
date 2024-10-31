@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:unit/shared/widgets/custom_button.dart';
 import 'package:unit/shared/widgets/custom_text_field.dart';
@@ -18,53 +19,53 @@ class ContactUsScreen extends StatelessWidget {
       child: Scaffold(
         appBar: const PreferredSize(
             preferredSize: Size(double.infinity, 46),
-            child: CustomAppbar('تواصل معنا')),
+            child: CustomAppbar('contact us')),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Padding(
-                padding: EdgeInsets.only(top: 24, bottom: 8),
+                Padding(
+                padding: const EdgeInsets.only(top: 24, bottom: 8),
                 child: Text(
-                  "لديك استفسار",
-                  style: TextStyle(
+                  "have a question?".tr(),
+                  style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
               ),
-              const Text("تواصل معنا لاجابتك عأي استفسار."),
-              const Padding(
-                padding: EdgeInsets.only(top: 16, bottom: 6),
-                child: Text('الاسم الكامل'),
+                Text("Contact us to answer any questions".tr()),
+                Padding(
+                padding: const EdgeInsets.only(top: 16, bottom: 6),
+                child: Text('full name'.tr()),
               ),
               CustomTextField(controller: nameController),
-              const Padding(
-                padding: EdgeInsets.only(top: 16, bottom: 6),
-                child: Text('البريد الالكتروني'),
+                Padding(
+                padding: const EdgeInsets.only(top: 16, bottom: 6),
+                child: Text('email'.tr()),
               ),
               CustomTextField(
                 controller: emailController,
                 keyboardType: TextInputType.emailAddress,
               ),
-              const Padding(
-                padding: EdgeInsets.only(top: 16, bottom: 6),
-                child: Text('رقم الجوال'),
+                Padding(
+                padding: const EdgeInsets.only(top: 16, bottom: 6),
+                child: Text('phone'.tr()),
               ),
               CustomTextField(
                   controller: phoneController,
                   keyboardType: TextInputType.phone),
-              const Padding(
-                padding: EdgeInsets.only(top: 16, bottom: 6),
-                child: Text('رسالتك'),
+                Padding(
+                padding: const EdgeInsets.only(top: 16, bottom: 6),
+                child: Text('your message'.tr()),
               ),
               CustomTextField(controller: messageController, maxLines: 4),
               Padding(
                 padding: const EdgeInsets.only(top: 24),
                 child: CustomElevatedButton(
                   onTap: () {},
-                  buttonText: 'ارسال',
+                  buttonText: 'send',
                 ),
               )
             ],
