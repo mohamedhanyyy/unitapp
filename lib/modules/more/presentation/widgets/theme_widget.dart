@@ -19,9 +19,9 @@ class _ThemeWidgetState extends State<ThemeWidget> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text("Theme".tr()),
-        RadioListTile.adaptive(
-            title: Text("Light".tr()),
+        Text("Theme".tr(),style: Theme.of(context).textTheme.bodyLarge,),
+         RadioListTile.adaptive(
+            title: Text("Light".tr(),style: Theme.of(context).textTheme.bodyLarge,),
             value: 0,
             activeColor: AppColors.primaryColor,
             groupValue: light,
@@ -35,7 +35,7 @@ class _ThemeWidgetState extends State<ThemeWidget> {
               // AppNavigation.pop();
             }),
         RadioListTile.adaptive(
-            title: Text("Dark".tr()),
+            title: Text("Dark".tr(),style: Theme.of(context).textTheme.bodyMedium,),
             value: 1,
             activeColor: AppColors.primaryColor,
             groupValue: light,

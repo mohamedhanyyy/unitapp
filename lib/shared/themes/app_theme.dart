@@ -12,8 +12,31 @@ class AppThemes {
     scaffoldBackgroundColor: AppColors.blackColor,
     cardColor: AppColors.blackColor,
     splashColor: Colors.transparent,
-     hintColor: AppColors.whiteColor,
-     appBarTheme: AppBarTheme(
+    hintColor: AppColors.whiteColor,
+    textTheme: const TextTheme(
+        titleLarge: TextStyle(
+          color: Colors.white,
+          fontFamily: '29ltbukrabold',
+        ),
+        titleMedium: TextStyle(
+          color: Colors.white,
+        ),
+        titleSmall: TextStyle(
+          color: Colors.white,
+          fontFamily: '29ltbukrabold',
+
+        ),
+        bodyLarge: TextStyle(
+          color: Colors.white,
+        ),
+        bodyMedium: TextStyle(
+          color: Colors.white,
+        ),
+        bodySmall: TextStyle(
+          color: Colors.white,
+
+        )),
+    appBarTheme: AppBarTheme(
       iconTheme: IconThemeData(size: 13.sp),
       titleSpacing: 0,
       elevation: 0,
@@ -36,6 +59,38 @@ class AppThemes {
     primaryColor: AppColors.primaryColor,
     scaffoldBackgroundColor: AppColors.whiteColor,
     cardColor: AppColors.whiteColor,
+    textTheme: const TextTheme(
+      titleLarge: TextStyle(
+        color: AppColors.primaryColor,
+        fontFamily: '29ltbukrabold',
+
+      ),
+      titleMedium: TextStyle(
+        color: AppColors.primaryColor,
+        fontFamily: '29ltbukrabold',
+
+      ),
+      titleSmall: TextStyle(
+        color: AppColors.primaryColor,
+        fontFamily: '29ltbukrabold',
+      ),
+      bodyLarge: TextStyle(
+        color: AppColors.primaryColor,
+        fontFamily: '29ltbukrabold',
+
+      ),
+      bodyMedium: TextStyle(
+        color: AppColors.primaryColor,
+        fontFamily: '29ltbukrabold',
+
+      ),
+      bodySmall: TextStyle(
+        color: AppColors.primaryColor,
+        fontFamily: '29ltbukrabold',
+
+      ),
+
+    ),
     splashColor: Colors.transparent,
     appBarTheme: AppBarTheme(
       iconTheme: IconThemeData(size: 13.sp),

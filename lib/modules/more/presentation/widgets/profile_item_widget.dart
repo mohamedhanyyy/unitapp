@@ -25,18 +25,20 @@ class ProfileItemWidget extends StatelessWidget {
       child: Column(
         children: [
           ListTile(
-            leading: SvgPicture.asset(icon,color: AppColors.getBackgroundColor,),
-            title: Text(
-              name.tr(),
-              style:   TextStyle(
-                  color: AppColors.getGreyTextColor, fontSize: 14),
+            leading: SvgPicture.asset(
+              icon,
+              color: AppColors.getBackgroundColor,
             ),
+            title:
+                Text(name.tr(), style: Theme.of(context).textTheme.bodyMedium),
             trailing: RotatedBox(
                 quarterTurns: context.isCurrentEnglish ? 2 : 0,
-                child: SvgPicture.asset(AppIcons.profileArrow,
-                color: AppColors.getBackgroundColor,)),
+                child: SvgPicture.asset(
+                  AppIcons.profileArrow,
+                  color: AppColors.getBackgroundColor,
+                )),
           ),
-            Padding(
+          Padding(
             padding: const EdgeInsets.symmetric(horizontal: 5),
             child: CustomDivider(),
           ),
@@ -69,18 +71,20 @@ class ProfileBottomSheetWidget extends StatelessWidget {
       child: Column(
         children: [
           ListTile(
-
-            leading: SvgPicture.asset(icon,color: AppColors.getBackgroundColor,),
+            leading: SvgPicture.asset(
+              icon,
+              color: AppColors.getBackgroundColor,
+            ),
             title: Text(
               name.tr(),
-              style:   TextStyle(
-                  color: AppColors.getGreyTextColor, fontSize: 14),
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
             trailing: RotatedBox(
                 quarterTurns: context.isCurrentEnglish ? 2 : 0,
-                child: SvgPicture.asset(AppIcons.profileArrow,color: AppColors.getBackgroundColor,)),
+                child: SvgPicture.asset(AppIcons.profileArrow,
+                    color: AppColors.getBackgroundColor)),
           ),
-            Padding(
+          Padding(
             padding: const EdgeInsets.symmetric(horizontal: 5),
             child: CustomDivider(),
           ),
