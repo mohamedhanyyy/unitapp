@@ -18,7 +18,7 @@ class BlueDivider extends StatelessWidget {
 
 class CustomDivider extends StatelessWidget {
 
-  CustomDivider({super.key, this.indent = 10});
+  const CustomDivider({super.key, this.indent = 10});
    final  double indent;
 
   @override

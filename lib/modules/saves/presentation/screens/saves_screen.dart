@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:unit/modules/saves/presentation/widgets/saved_item_widget.dart';
 import 'package:unit/shared/widgets/custom_text_field.dart';
 
-import '../../../../core/resources/colors.dart';
 import '../../../../core/resources/icons.dart';
 
 class SavesScreen extends StatefulWidget {

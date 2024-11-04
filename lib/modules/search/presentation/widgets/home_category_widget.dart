@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:unit/core/extensions/context_extension.dart';
 import '../../../../core/resources/colors.dart';
 import '../../../../core/resources/icons.dart';
 import '../../../../shared/widgets/custom_text_field.dart';
@@ -25,7 +26,7 @@ class HomeCategoryWidget extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 23),
               child: Row(
                 children: [
-                  SvgPicture.asset(AppIcons.menuHome,color: Theme.of(context).primaryColor,),
+                  SvgPicture.asset(AppIcons.menuHome,colorFilter: Theme.of(context).primaryColor.toColorFilter),
                   Padding(
                     padding:
                         const EdgeInsetsDirectional.only(start: 5, end: 10),

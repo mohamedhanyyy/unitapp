@@ -27,7 +27,7 @@ class ProfileItemWidget extends StatelessWidget {
           ListTile(
             leading: SvgPicture.asset(
               icon,
-              color: AppColors.getBackgroundColor,
+              colorFilter: AppColors.getBackgroundColor.toColorFilter,
             ),
             title:
                 Text(name.tr(), style: Theme.of(context).textTheme.bodyMedium),
@@ -35,11 +35,11 @@ class ProfileItemWidget extends StatelessWidget {
                 quarterTurns: context.isCurrentEnglish ? 2 : 0,
                 child: SvgPicture.asset(
                   AppIcons.profileArrow,
-                  color: AppColors.getBackgroundColor,
+                  colorFilter: AppColors.getBackgroundColor.toColorFilter,
                 )),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 5),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 5),
             child: CustomDivider(),
           ),
         ],
@@ -74,7 +74,7 @@ class ProfileBottomSheetWidget extends StatelessWidget {
           ListTile(
             leading: SvgPicture.asset(
               icon,
-              color: AppColors.getBackgroundColor,
+              colorFilter: AppColors.getBackgroundColor.toColorFilter,
             ),
             title: Text(
               name.tr(),
@@ -83,10 +83,10 @@ class ProfileBottomSheetWidget extends StatelessWidget {
             trailing: RotatedBox(
                 quarterTurns: context.isCurrentEnglish ? 2 : 0,
                 child: SvgPicture.asset(AppIcons.profileArrow,
-                    color: AppColors.getBackgroundColor)),
+                    colorFilter: AppColors.getBackgroundColor.toColorFilter)),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 5),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 5),
             child: CustomDivider(),
           ),
         ],

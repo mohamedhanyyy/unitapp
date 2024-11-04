@@ -50,7 +50,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       height: 0, decoration: TextDecoration.underline)),
               leading: SvgPicture.asset(AppIcons.profileInfo),
             ),
-            CustomDivider(indent: 0),
+            const CustomDivider(indent: 0),
             ListTile(
               contentPadding: EdgeInsets.zero,
               title: const Text(
@@ -63,7 +63,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       height: 0, decoration: TextDecoration.underline)),
               leading: SvgPicture.asset(AppIcons.profileInfo),
             ),
-            CustomDivider(indent: 0),
+            const CustomDivider(indent: 0),
             ListTile(
               contentPadding: EdgeInsets.zero,
               title: const Text(
@@ -76,7 +76,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       height: 0, decoration: TextDecoration.underline)),
               leading: SvgPicture.asset(AppIcons.profileInfo),
             ),
-            CustomDivider(indent: 0),
+            const CustomDivider(indent: 0),
             ListTile(
               contentPadding: EdgeInsets.zero,
               title: const Text(
@@ -89,7 +89,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       height: 0, decoration: TextDecoration.underline)),
               leading: SvgPicture.asset(AppIcons.profileInfo),
             ),
-            CustomDivider(indent: 0),
+            const CustomDivider(indent: 0),
             ListTile(
               contentPadding: EdgeInsets.zero,
               title: const Text(
@@ -102,7 +102,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       height: 0, decoration: TextDecoration.underline)),
               leading: SvgPicture.asset(AppIcons.profileInfo),
             ),
-            CustomDivider(indent: 0),
+            const CustomDivider(indent: 0),
           ],
         ),
       ),
