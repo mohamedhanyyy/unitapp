@@ -24,8 +24,8 @@ class UnitApp extends StatelessWidget {
       builder: (context, _) {
         return GestureDetector(
           onTap: GeneralFunctions.hideKeyboard,
-          child: MultiBlocProvider(
 
+          child: MultiBlocProvider(
             providers: [
               BlocProvider(create: (context) => LoginCubit()),
               BlocProvider(create: (context) => MapZoomCubit()),

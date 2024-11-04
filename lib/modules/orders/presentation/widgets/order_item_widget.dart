@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:unit/core/extensions/context_extension.dart';
 import 'package:unit/core/resources/colors.dart';
 import 'package:unit/core/resources/images.dart';
 import 'package:unit/modules/orders/presentation/screens/order_details_screen.dart';
@@ -59,8 +60,7 @@ class OrderItemWidget extends StatelessWidget {
                               SvgPicture.asset(AppIcons.estate),
                               const SizedBox(width: 5),
                               const Flexible(
-                                child: Text('الرياض -حي الصفا',
-                                    style: greyText11W400),
+                                child: Text('الرياض -حي الصفا', style: greyText11W400),
                               )
                             ],
                           ),
@@ -108,15 +108,15 @@ class OrderItemWidget extends StatelessWidget {
                   Flexible(
                     child: CustomElevatedButton(
                       height: 40,
-                      color: Theme.of(context).primaryColor,
-                      borderColor: Theme.of(context).secondaryHeaderColor,
+                      color: Theme.of(context).secondaryHeaderColor,
+                      borderColor: Theme.of(context).primaryColor,
 
                       borderRadius: 8,
                       onTap: () {},
                       widget: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          SvgPicture.asset(AppIcons.call),
+                          SvgPicture.asset(AppIcons.call,colorFilter: Theme.of(context).primaryColor.toColorFilter),
                           const SizedBox(width: 10),
                           Text("phone".tr(), style: Theme.of(context).textTheme.bodySmall),
                         ],
@@ -126,15 +126,15 @@ class OrderItemWidget extends StatelessWidget {
                   const SizedBox(width: 15),
                   Flexible(
                     child: CustomElevatedButton(
-                      borderColor: Theme.of(context).secondaryHeaderColor,
-                      color: Theme.of(context).primaryColor,
+                      color: Theme.of(context).secondaryHeaderColor,
+                      borderColor: Theme.of(context).primaryColor,
                       height: 40,
                       borderRadius: 8,
                       onTap: () {},
                       widget: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          SvgPicture.asset(AppIcons.whatsapp),
+                          SvgPicture.asset(AppIcons.whatsapp,colorFilter: Theme.of(context).primaryColor.toColorFilter,),
                           const SizedBox(width: 10),
                           Text("whatsapp".tr(), style: Theme.of(context).textTheme.bodySmall),
                         ],

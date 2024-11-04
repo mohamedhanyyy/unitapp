@@ -5,51 +5,6 @@ import 'package:unit/shared/themes/palette.dart';
 import '../../core/resources/colors.dart';
 
 class AppThemes {
-  static ThemeData darkTheme = ThemeData(
-    dividerTheme: const DividerThemeData(color: Colors.transparent),
-    fontFamily: '29ltbukrabold',
-    primaryColor: AppColors.whiteColor,
-    scaffoldBackgroundColor: AppColors.blackColor,
-    cardColor: AppColors.blackColor,
-    splashColor: Colors.transparent,
-    hintColor: AppColors.whiteColor,
-    textTheme: const TextTheme(
-        titleLarge: TextStyle(
-          color: Colors.white,
-          fontFamily: '29ltbukrabold',
-        ),
-        titleMedium: TextStyle(
-          color: Colors.white,
-        ),
-        titleSmall: TextStyle(
-          color: Colors.white,
-          fontFamily: '29ltbukrabold',
-        ),
-        bodyLarge: TextStyle(
-          color: Colors.white,
-        ),
-        bodyMedium: TextStyle(
-          color: Colors.white,
-        ),
-        bodySmall: TextStyle(
-          color: Colors.white,
-        )),
-    appBarTheme: AppBarTheme(
-      iconTheme: IconThemeData(size: 13.sp),
-      titleSpacing: 0,
-      elevation: 0,
-      backgroundColor: AppColors.blackColor,
-    ),
-    secondaryHeaderColor: AppColors.blackColor,
-    highlightColor: Colors.black,
-    textSelectionTheme:
-        const TextSelectionThemeData(cursorColor: AppColors.primaryColor),
-    hoverColor: Colors.transparent,
-    colorScheme: ColorScheme.fromSwatch(
-      primarySwatch: Palette.kToDark,
-    ).copyWith(surface: AppColors.blackColor),
-  );
-
   //white theme
   static ThemeData whiteTheme = ThemeData(
     hintColor: AppColors.primaryColor,
@@ -94,10 +49,56 @@ class AppThemes {
     secondaryHeaderColor: AppColors.whiteColor,
     highlightColor: Colors.transparent,
     textSelectionTheme:
-        const TextSelectionThemeData(cursorColor: AppColors.primaryColor),
+    const TextSelectionThemeData(cursorColor: AppColors.primaryColor),
     hoverColor: Colors.transparent,
     colorScheme: ColorScheme.fromSwatch(
       primarySwatch: Palette.kToDark,
     ).copyWith(surface: AppColors.whiteColor),
+  );
+  //dark theme
+  static ThemeData darkTheme = ThemeData(
+    dividerTheme: const DividerThemeData(color: Colors.transparent),
+    fontFamily: '29ltbukrabold',
+    primaryColor: AppColors.whiteColor,
+    scaffoldBackgroundColor: AppColors.blackColor,
+    cardColor: AppColors.blackColor,
+    splashColor: Colors.transparent,
+    hintColor: AppColors.whiteColor,
+    textTheme: const TextTheme(
+        titleLarge: TextStyle(
+          color: Colors.white,
+          fontFamily: '29ltbukrabold',
+        ),
+        titleMedium: TextStyle(
+          color: Colors.white,
+        ),
+        titleSmall: TextStyle(
+          color: Colors.white,
+          fontFamily: '29ltbukrabold',
+        ),
+        bodyLarge: TextStyle(
+          color: Colors.white,
+        ),
+        bodyMedium: TextStyle(
+          color: Colors.white,
+        ),
+        bodySmall: TextStyle(
+          color: Colors.white,
+        )),
+    appBarTheme: AppBarTheme(
+      iconTheme: IconThemeData(size: 13.sp),
+      titleSpacing: 0,
+      elevation: 0,
+      backgroundColor: AppColors.blackColor,
+    ),
+    secondaryHeaderColor: AppColors.blackColor,
+    highlightColor: Colors.black,
+    textSelectionTheme:
+
+        const TextSelectionThemeData(cursorColor: AppColors.primaryColor),
+    hoverColor: Colors.transparent,
+    colorScheme: ColorScheme.fromSwatch(
+      primarySwatch: Palette.kToDark,
+    ).copyWith(surface: AppColors.blackColor),
   );
 }
