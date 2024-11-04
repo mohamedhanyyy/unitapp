@@ -15,7 +15,7 @@ class SavedItemWidget extends StatelessWidget {
       padding: const EdgeInsets.all(13),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: const Color(0xffB9C0C9)),
+        border: Border.all(color:   Theme.of(context).primaryColor),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -56,6 +56,7 @@ class SavedItemWidget extends StatelessWidget {
                     onTap: () {},
                     buttonText: 'جولة افتراضية داخلية',
                     fontSize: 11,
+
                     height: 40,
                   ),
                 ),
@@ -65,8 +66,8 @@ class SavedItemWidget extends StatelessWidget {
                     height: 40,
                     onTap: () {},
                     buttonText: 'عرض التفاصيل',
-                    color: AppColors.whiteColor,
-                    fontColor: AppColors.primaryColor,
+                    color: Theme.of(context).secondaryHeaderColor,
+                    fontColor: Theme.of(context).primaryColor,
                   ),
                 ),
               ],

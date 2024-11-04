@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get_it/get_it.dart';
-import 'package:unit/core/resources/styles.dart';
 import 'package:unit/modules/orders/cubit/orders_cubit.dart';
 
 import '../../../../core/resources/colors.dart';
@@ -30,27 +29,35 @@ class OrdersScreen extends StatelessWidget {
               height: 50.h,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25),
-                  border: Border.all(color: AppColors.grey)),
+                  border: Border.all(color: Theme.of(context).primaryColor)),
               child: Row(
                 children: [
                   Expanded(
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
+                          textStyle: Theme.of(context)
+                              .textTheme
+                              .bodyMedium
+                              ?.copyWith(
+                                  color:
+                                      Theme.of(context).secondaryHeaderColor),
                           elevation: 0,
                           backgroundColor: ordersCubit.mainCatIndex == 1
                               ? AppColors.lightPurple
-                              : AppColors.whiteColor),
+                              : Theme.of(context).secondaryHeaderColor),
                       onPressed: () {
                         ordersCubit.changeMainIndex(1);
                       },
                       child: Text(
                         "my tour requests".tr(),
                         style: ordersCubit.mainCatIndex == 1
-                            ? primary12W400
-                            : lightGrey12W400,
+                            ? Theme.of(context).textTheme.bodySmall?.copyWith(
+                                color:
+                                    Theme.of(context).scaffoldBackgroundColor)
+                            : Theme.of(context).textTheme.bodySmall?.copyWith(
+                                color: Theme.of(context).primaryColor),
                         textAlign: TextAlign.center,
                       ),
-
                     ),
                   ),
                   // const SizedBox(width: 20),
@@ -61,14 +68,23 @@ class OrdersScreen extends StatelessWidget {
                       },
                       style: ElevatedButton.styleFrom(
                           elevation: 0,
+                          textStyle: Theme.of(context)
+                              .textTheme
+                              .bodyMedium
+                              ?.copyWith(
+                                  color:
+                                      Theme.of(context).secondaryHeaderColor),
                           backgroundColor: ordersCubit.mainCatIndex == 0
                               ? AppColors.lightPurple
-                              : AppColors.whiteColor),
+                              : Theme.of(context).secondaryHeaderColor),
                       child: Text(
                         "my units".tr(),
                         style: ordersCubit.mainCatIndex == 0
-                            ? primary12W400
-                            : lightGrey12W400,
+                            ? Theme.of(context).textTheme.bodySmall?.copyWith(
+                                color:
+                                    Theme.of(context).scaffoldBackgroundColor)
+                            : Theme.of(context).textTheme.bodySmall?.copyWith(
+                                color: Theme.of(context).primaryColor),
                       ),
                     ),
                   ),

@@ -61,6 +61,7 @@ class ProfileBottomSheetWidget extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         showModalBottomSheet(
+          backgroundColor: Theme.of(context).secondaryHeaderColor,
           context: context,
           builder: (context) => page,
           isScrollControlled: true,

@@ -24,7 +24,6 @@ class AppThemes {
         titleSmall: TextStyle(
           color: Colors.white,
           fontFamily: '29ltbukrabold',
-
         ),
         bodyLarge: TextStyle(
           color: Colors.white,
@@ -34,7 +33,6 @@ class AppThemes {
         ),
         bodySmall: TextStyle(
           color: Colors.white,
-
         )),
     appBarTheme: AppBarTheme(
       iconTheme: IconThemeData(size: 13.sp),
@@ -42,6 +40,7 @@ class AppThemes {
       elevation: 0,
       backgroundColor: AppColors.blackColor,
     ),
+    secondaryHeaderColor: AppColors.blackColor,
     highlightColor: Colors.black,
     textSelectionTheme:
         const TextSelectionThemeData(cursorColor: AppColors.primaryColor),
@@ -63,12 +62,10 @@ class AppThemes {
       titleLarge: TextStyle(
         color: AppColors.primaryColor,
         fontFamily: '29ltbukrabold',
-
       ),
       titleMedium: TextStyle(
         color: AppColors.primaryColor,
         fontFamily: '29ltbukrabold',
-
       ),
       titleSmall: TextStyle(
         color: AppColors.primaryColor,
@@ -77,19 +74,15 @@ class AppThemes {
       bodyLarge: TextStyle(
         color: AppColors.primaryColor,
         fontFamily: '29ltbukrabold',
-
       ),
       bodyMedium: TextStyle(
         color: AppColors.primaryColor,
         fontFamily: '29ltbukrabold',
-
       ),
       bodySmall: TextStyle(
         color: AppColors.primaryColor,
         fontFamily: '29ltbukrabold',
-
       ),
-
     ),
     splashColor: Colors.transparent,
     appBarTheme: AppBarTheme(
@@ -98,6 +91,7 @@ class AppThemes {
       elevation: 0,
       backgroundColor: AppColors.whiteColor,
     ),
+    secondaryHeaderColor: AppColors.whiteColor,
     highlightColor: Colors.transparent,
     textSelectionTheme:
         const TextSelectionThemeData(cursorColor: AppColors.primaryColor),

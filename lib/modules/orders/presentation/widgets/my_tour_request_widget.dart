@@ -38,13 +38,12 @@ class _MyTourRequestwidgetState extends State<MyTourRequestwidget> {
                     setState(() {});
                   },
                   child: Container(
-                    // width: 105,
                     padding: const EdgeInsets.symmetric(horizontal: 17),
                     margin: const EdgeInsets.symmetric(horizontal: 4),
                     decoration: BoxDecoration(
                         color: selectedIndex == index
                             ? AppColors.lightGreenColor
-                            : AppColors.whiteColor,
+                            : Theme.of(context).appBarTheme.backgroundColor,
                         borderRadius: BorderRadius.circular(34),
                         border: Border.all(color: AppColors.grey)),
                     child: Center(

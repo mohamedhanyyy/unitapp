@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../core/resources/colors.dart';
 import '../../../../core/resources/icons.dart';
-import '../../../../core/resources/styles.dart';
 import '../../../../shared/widgets/custom_text_field.dart';
 import '../cubit/category_cubit.dart';
 
@@ -26,18 +25,17 @@ class HomeCategoryWidget extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 23),
               child: Row(
                 children: [
-                  SvgPicture.asset(AppIcons.menuHome),
+                  SvgPicture.asset(AppIcons.menuHome,color: Theme.of(context).primaryColor,),
                   Padding(
                     padding:
                         const EdgeInsetsDirectional.only(start: 5, end: 10),
                     child: Text(
                       "menu".tr(),
-                      style: lightGrey12W400,
+                      style: Theme.of(context).textTheme.bodySmall,
                     ),
                   ),
                   Flexible(
                     child: CustomTextField(
-                      fillColor: AppColors.greyTextField,
                       hintFontSize: 11,
                       hintColor: AppColors.getGreyTextColor,
                       borderRadius: 20,
@@ -71,18 +69,14 @@ class HomeCategoryWidget extends StatelessWidget {
                           decoration: BoxDecoration(
                             color: isSelected
                                 ? AppColors.lightGreenColor
-                                : AppColors.greyTextField,
+                                : Theme.of(context).secondaryHeaderColor,
                             borderRadius: BorderRadius.circular(34),
                             border: Border.all(color: AppColors.greyTextField),
                           ),
                           child: Center(
                             child: Text(
                               e.tr(),
-                              style: TextStyle(
-                                color: isSelected
-                                    ? AppColors.whiteColor
-                                    : AppColors.blackColor,
-                              ),
+                              style: Theme.of(context).textTheme.bodySmall
                             ),
                           ),
                         ),

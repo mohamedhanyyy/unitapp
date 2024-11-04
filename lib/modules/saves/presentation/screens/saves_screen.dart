@@ -30,7 +30,7 @@ class _SavesScreenState extends State<SavesScreen> {
                   controller: controller,
                   hintFontSize: 11,
                   textInputAction: TextInputAction.search,
-                  fillColor: AppColors.greyTextField,
+                  // fillColor: AppColors.greyTextField,
                   borderRadius: 24,
                   hintText: 'المدينة, نوع العقار, اسم المشروع',
                   prefixIcon: AppIcons.estate,

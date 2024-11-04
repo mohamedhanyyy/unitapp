@@ -1,12 +1,12 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-// import 'package:unit/shared/resources/colors.dart';
+import 'package:unit/services/navigation/navigation.dart';
 
 import '../../core/resources/colors.dart';
 
-const customButtonTextStyle = TextStyle(
-    fontSize: 13, color: AppColors.whiteColor, fontWeight: FontWeight.w400);
+  final customButtonTextStyle = TextStyle(
+    fontSize: 13, color: Theme.of(AppNavigation.context).secondaryHeaderColor, fontWeight: FontWeight.w400);
 
 class CustomElevatedButton extends StatelessWidget {
   final String? buttonText;
@@ -45,9 +45,9 @@ class CustomElevatedButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           minimumSize: Size.fromHeight(height??48.h),
           elevation: 0,
-          backgroundColor: color ?? AppColors.primaryColor,
+          backgroundColor: color ?? Theme.of(context).primaryColor,
           shape: RoundedRectangleBorder(
-            side: BorderSide(color: borderColor ?? AppColors.primaryColor),
+            side: BorderSide(color: borderColor ?? Theme.of(context).primaryColor),
             borderRadius: BorderRadius.circular(borderRadius ?? 6),
           ),
         ),

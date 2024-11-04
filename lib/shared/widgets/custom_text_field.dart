@@ -4,13 +4,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../core/resources/colors.dart';
 import '../../core/resources/styles.dart';
+import '../../services/navigation/navigation.dart';
 
 class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
   final String? hintText;
   final Color? hintColor;
   final int? maxLines;
-  final Color fillColor;
+  final Color? fillColor;
   final Color borderColor;
   final String? prefixIcon;
   final double borderRadius;
@@ -29,7 +30,7 @@ class CustomTextField extends StatelessWidget {
     this.borderRadius = 6,
     this.hintColor,
     this.hintFontSize,
-    this.fillColor = Colors.white,
+    this.fillColor ,
     this.borderColor = AppColors.borderColor,
     this.prefixIcon,
     this.suffixIcon,
@@ -52,7 +53,7 @@ class CustomTextField extends StatelessWidget {
         hintStyle:
             lightGrey15W400.copyWith(color: hintColor, fontSize: hintFontSize),
         labelStyle: lightGrey15W400,
-        fillColor: fillColor,
+        fillColor: fillColor??Theme.of(AppNavigation.context).secondaryHeaderColor,
         prefixIconConstraints: const BoxConstraints(),
         filled: true,
         prefixIcon: prefixIcon != null

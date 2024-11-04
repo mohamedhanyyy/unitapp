@@ -108,7 +108,9 @@ class OrderItemWidget extends StatelessWidget {
                   Flexible(
                     child: CustomElevatedButton(
                       height: 40,
-                      color: Theme.of(context).cardColor,
+                      color: Theme.of(context).primaryColor,
+                      borderColor: Theme.of(context).secondaryHeaderColor,
+
                       borderRadius: 8,
                       onTap: () {},
                       widget: Row(
@@ -116,7 +118,7 @@ class OrderItemWidget extends StatelessWidget {
                         children: [
                           SvgPicture.asset(AppIcons.call),
                           const SizedBox(width: 10),
-                          Text("phone".tr(), style: primary10W400),
+                          Text("phone".tr(), style: Theme.of(context).textTheme.bodySmall),
                         ],
                       ),
                     ),
@@ -124,7 +126,8 @@ class OrderItemWidget extends StatelessWidget {
                   const SizedBox(width: 15),
                   Flexible(
                     child: CustomElevatedButton(
-                      color: Theme.of(context).cardColor,
+                      borderColor: Theme.of(context).secondaryHeaderColor,
+                      color: Theme.of(context).primaryColor,
                       height: 40,
                       borderRadius: 8,
                       onTap: () {},
@@ -133,7 +136,7 @@ class OrderItemWidget extends StatelessWidget {
                         children: [
                           SvgPicture.asset(AppIcons.whatsapp),
                           const SizedBox(width: 10),
-                          Text("whatsapp".tr(), style: primary10W400),
+                          Text("whatsapp".tr(), style: Theme.of(context).textTheme.bodySmall),
                         ],
                       ),
                     ),
