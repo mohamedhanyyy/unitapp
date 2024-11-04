@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -25,11 +26,11 @@ class SavedItemWidget extends StatelessWidget {
               child: SvgPicture.asset(AppIcons.save)),
           Image.asset('assets/images/home.png'),
           const SizedBox(height: 10),
-          const Row(
+            Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('وحدة 21', style: TextStyle(fontWeight: FontWeight.w700)),
-              Text('وقت التسليم 31-06-2026',
+              Text('${"unit".tr()} 21', style: TextStyle(fontWeight: FontWeight.w700)),
+              const Text('وقت التسليم 31-06-2026',
                   style: TextStyle(fontWeight: FontWeight.w400, fontSize: 12))
             ],
           ),

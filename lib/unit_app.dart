@@ -35,6 +35,7 @@ class UnitApp extends StatelessWidget {
             child: MaterialApp(
               darkTheme: AppThemes.darkTheme,
               theme: AppThemes.whiteTheme,
+              title: 'الوحدة العقارية',
               themeMode: PreferencesHelper.getTheme == 'light'
                   ? ThemeMode.light
                   : ThemeMode.dark,

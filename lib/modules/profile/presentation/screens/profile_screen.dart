@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:unit/core/resources/styles.dart';
@@ -20,16 +21,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
         child: Scaffold(
       appBar: const PreferredSize(
           preferredSize: Size(double.infinity, 46),
-          child: CustomAppbar('الملف الشخصي')),
+          child: CustomAppbar('profile')),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 24),
-            const Text(
-              "المعلومات الشخصية",
-              style: TextStyle(fontWeight: FontWeight.w700, fontSize: 14),
+            Text(
+              "profile information".tr(),
+              style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 14),
             ),
             const Text(
               "معلوماتك الشخصية مسندة من منصة نافذ يتم استخدامها فقط للتأكد من صحة الحساب الخاص بك.",
@@ -41,11 +42,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ListTile(
               contentPadding: EdgeInsets.zero,
               title: const Text(
-                'الاسم الكامل',
+                'full name',
                 style: black14W400,
               ),
               subtitle: const Text('شركة سردة', style: black14W400),
-              trailing: Text("تعديل",
+              trailing: Text("edit".tr(),
                   style: primary14W400.copyWith(
                       height: 0, decoration: TextDecoration.underline)),
               leading: SvgPicture.asset(AppIcons.profileInfo),
@@ -58,7 +59,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 style: black14W400,
               ),
               subtitle: const Text('5552046300', style: black14W400),
-              trailing: Text("تعديل",
+              trailing: Text("edit".tr(),
                   style: primary14W400.copyWith(
                       height: 0, decoration: TextDecoration.underline)),
               leading: SvgPicture.asset(AppIcons.profileInfo),
@@ -66,12 +67,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
             const CustomDivider(indent: 0),
             ListTile(
               contentPadding: EdgeInsets.zero,
-              title: const Text(
-                'العنوان',
-                style: black14W400,
-              ),
+              title: Text('address'.tr(), style: black14W400),
               subtitle: const Text('شركة سردة', style: black14W400),
-              trailing: Text("تعديل",
+              trailing: Text("edit".tr(),
                   style: primary14W400.copyWith(
                       height: 0, decoration: TextDecoration.underline)),
               leading: SvgPicture.asset(AppIcons.profileInfo),
@@ -80,11 +78,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ListTile(
               contentPadding: EdgeInsets.zero,
               title: const Text(
-                'البريد الالكتروني',
+                'email',
                 style: black14W400,
               ),
               subtitle: const Text('Sarrdeh@gmail.com', style: black14W400),
-              trailing: Text("تعديل",
+              trailing: Text("edit".tr(),
                   style: primary14W400.copyWith(
                       height: 0, decoration: TextDecoration.underline)),
               leading: SvgPicture.asset(AppIcons.profileInfo),
@@ -92,12 +90,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
             const CustomDivider(indent: 0),
             ListTile(
               contentPadding: EdgeInsets.zero,
-              title: const Text(
-                'رقم الجوال',
-                style: black14W400,
-              ),
+              title: Text('phone number'.tr(), style: black14W400),
               subtitle: const Text('+963255888000', style: black14W400),
-              trailing: Text("تعديل",
+              trailing: Text("edit".tr(),
                   style: primary14W400.copyWith(
                       height: 0, decoration: TextDecoration.underline)),
               leading: SvgPicture.asset(AppIcons.profileInfo),

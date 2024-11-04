@@ -20,8 +20,6 @@
   "confirm password is required": "تأكيد كلمة المرور مطلوب",
   "passwords do not match": "كلمات المرور غير متطابقة",
   "phone": "الهاتف",
-
-
   "////////////////////////////////////////": "////////////////////////////////////////",
 
   "search": "البحث",
@@ -58,13 +56,12 @@
   "have a question?": "لديك استفسار؟",
   "your message": "رسالتك",
   "send": "ارسال",
+  "view details": "عرض التفاصيل",
+  "edit": "تعديل",
   "Contact us to answer any questions": "تواصل معنا لاجابتك علي اي استفسار.",
   "Terms and conditions": "الشروط و الاحكام",
   "Theme": "الوضع",
-  "Light": "فاتح",
-  "Dark": "داكن"
-
-
-
+  "Light": "وضع نهاري",
+  "Dark": "وضع ليلي"
 
 }

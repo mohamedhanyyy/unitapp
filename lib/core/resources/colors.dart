@@ -21,7 +21,6 @@ class AppColors {
   static const borderColor = Color(0xffDCE0E4);
 
   ///
-  ///
 
   static Color get getGreyTextColor {
     if (PreferencesHelper.getTheme == 'light') {

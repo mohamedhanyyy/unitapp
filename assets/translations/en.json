@@ -8,6 +8,7 @@
   "confirm password": "Confirm password",
   "phone number": "Phone number",
   "sign up": "Sign Up",
+  "edit": "Edit",
   "already have account": "Already have account?",
   "email is required": "Email is required",
   "enter a valid email address": "Enter a valid email address",
@@ -26,6 +27,8 @@
 
   "search": "Search",
   "orders": "Orders",
+  "view details": "View details",
+
   "savings": "Savings",
   "more": "More",
   "notifications": "Notifications",
