@@ -28,6 +28,7 @@ class NotificationsScreen extends StatelessWidget {
                 child: CustomTextField(
                   controller: controller,
                   hintText: 'search',
+
                   prefixIcon: AppIcons.homeSearch,
                   borderRadius: 20,
                 ),

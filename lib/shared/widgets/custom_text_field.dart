@@ -51,7 +51,7 @@ class CustomTextField extends StatelessWidget {
         hintText: hintText?.tr(),
         contentPadding: EdgeInsets.zero,
         hintStyle:
-            lightGrey15W400.copyWith(color: hintColor, fontSize: hintFontSize),
+            lightGrey15W400.copyWith(color: hintColor??Theme.of(context).hintColor, fontSize: hintFontSize),
         labelStyle: lightGrey15W400,
         fillColor: fillColor??Theme.of(AppNavigation.context).secondaryHeaderColor,
         prefixIconConstraints: const BoxConstraints(),

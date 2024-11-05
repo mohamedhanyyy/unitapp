@@ -22,6 +22,7 @@ class OrderItemWidget extends StatelessWidget {
       },
       child: Card(
         elevation: 0,
+        color: Theme.of(context).scaffoldBackgroundColor,
         margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
@@ -49,9 +50,9 @@ class OrderItemWidget extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(bottom: 8, top: 4),
                           child:
-                              Text("${'unit'.tr()} 21", style: lightGrey12W700),
+                              Text("${'unit'.tr()} 21", style: Theme.of(context).textTheme.bodySmall),
                         ),
-                        const Text("60.000 SAR", style: lightGrey12W700),
+                          Text("60.000 SAR", style: Theme.of(context).textTheme.bodySmall),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 5),
                           child: Row(
@@ -59,8 +60,8 @@ class OrderItemWidget extends StatelessWidget {
                             children: [
                               SvgPicture.asset(AppIcons.estate),
                               const SizedBox(width: 5),
-                              const Flexible(
-                                child: Text('الرياض -حي الصفا', style: greyText11W400),
+                                Flexible(
+                                child: Text('الرياض -حي الصفا', style: Theme.of(context).textTheme.bodySmall),
                               )
                             ],
                           ),
@@ -71,10 +72,10 @@ class OrderItemWidget extends StatelessWidget {
                             child: Row(
                               children: [
                                 Text('send order date'.tr(),
-                                    style: greyText10W400),
+                                    style: Theme.of(context).textTheme.bodySmall),
                                 const SizedBox(width: 5),
-                                const Text('31-06-2024',
-                                    style: lightGrey10W400),
+                                  Text('31-06-2024',
+                                    style: Theme.of(context).textTheme.bodySmall),
                               ],
                             ),
                           ),
@@ -82,9 +83,9 @@ class OrderItemWidget extends StatelessWidget {
                         FittedBox(
                           child: Row(
                             children: [
-                              Text('tour date:'.tr(), style: greyText10W400),
+                              Text('tour date:'.tr(), style: Theme.of(context).textTheme.bodySmall),
                               const SizedBox(width: 5),
-                              const Text('31-06-2024', style: lightGrey10W400),
+                                Text('31-06-2024', style: Theme.of(context).textTheme.bodySmall),
                             ],
                           ),
                         ),

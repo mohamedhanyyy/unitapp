@@ -29,7 +29,7 @@ class MoreScreen extends StatelessWidget {
               name: 'notifications',
               icon: AppIcons.alarm,
               page: NotificationsScreen()),
-          const ProfileItemWidget(
+            ProfileItemWidget(
               name: 'profile', icon: AppIcons.profile, page: ProfileScreen()),
           const ProfileItemWidget(
               name: 'about real estate unit',

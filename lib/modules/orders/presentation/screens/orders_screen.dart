@@ -43,19 +43,17 @@ class OrdersScreen extends StatelessWidget {
                                       Theme.of(context).secondaryHeaderColor),
                           elevation: 0,
                           backgroundColor: ordersCubit.mainCatIndex == 1
-                              ? AppColors.lightPurple
-                              : Theme.of(context).secondaryHeaderColor),
+                              ? Theme.of(context).primaryColor
+                              : Theme.of(context).scaffoldBackgroundColor),
                       onPressed: () {
                         ordersCubit.changeMainIndex(1);
                       },
                       child: Text(
                         "my tour requests".tr(),
-                        style: ordersCubit.mainCatIndex == 1
-                            ? Theme.of(context).textTheme.bodySmall?.copyWith(
-                                color:
-                                    Theme.of(context).scaffoldBackgroundColor)
-                            : Theme.of(context).textTheme.bodySmall?.copyWith(
-                                color: Theme.of(context).primaryColor),
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                            color: ordersCubit.mainCatIndex == 1
+                                ? Theme.of(context).scaffoldBackgroundColor
+                                : Theme.of(context).primaryColor),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -75,17 +73,17 @@ class OrdersScreen extends StatelessWidget {
                                   color:
                                       Theme.of(context).secondaryHeaderColor),
                           backgroundColor: ordersCubit.mainCatIndex == 0
-                              ? AppColors.lightPurple
-                              : Theme.of(context).secondaryHeaderColor),
-                      child: Text(
-                        "my units".tr(),
-                        style: ordersCubit.mainCatIndex == 0
-                            ? Theme.of(context).textTheme.bodySmall?.copyWith(
-                                color:
-                                    Theme.of(context).scaffoldBackgroundColor)
-                            : Theme.of(context).textTheme.bodySmall?.copyWith(
-                                color: Theme.of(context).primaryColor),
-                      ),
+                              ? Theme.of(context).primaryColor
+                              : Theme.of(context).scaffoldBackgroundColor),
+                      child: Text("my units".tr(),
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodySmall
+                              ?.copyWith(
+                                  color: ordersCubit.mainCatIndex == 0
+                                      ? Theme.of(context)
+                                          .scaffoldBackgroundColor
+                                      : Theme.of(context).primaryColor)),
                     ),
                   ),
                 ],
