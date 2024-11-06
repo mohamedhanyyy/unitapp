@@ -5,7 +5,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get_it/get_it.dart';
 import 'package:unit/modules/orders/cubit/orders_cubit.dart';
 
-import '../../../../core/resources/colors.dart';
 import '../widgets/my_tour_request_widget.dart';
 import '../widgets/my_units_widget.dart';
 

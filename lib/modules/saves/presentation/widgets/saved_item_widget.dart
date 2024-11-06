@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:unit/core/extensions/context_extension.dart';
 
-import '../../../../core/resources/colors.dart';
 import '../../../../core/resources/icons.dart';
 import '../../../../shared/widgets/custom_button.dart';
 import '../../../../shared/widgets/house_info.dart';

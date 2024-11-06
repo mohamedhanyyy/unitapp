@@ -19,11 +19,13 @@ class _LanguageWidgetState extends State<LanguageWidget> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text("language".tr()),
+        Text("language".tr(),style: Theme.of(context).textTheme.bodyMedium,),
         RadioListTile.adaptive(
-            title:   Text("Arabic".tr()),
+            title:   Text("Arabic".tr(),style: Theme.of(context).textTheme.bodySmall),
             value: 0,
-            activeColor: AppColors.primaryColor,
+            fillColor: WidgetStateProperty.all(Theme.of(context).hintColor),
+            activeColor: Theme.of(context).primaryColor,
+            // selectedTileColor: Theme.of(context).hintColor,
             groupValue: arabic,
             onChanged: (val) {
               setState(() {
@@ -32,11 +34,15 @@ class _LanguageWidgetState extends State<LanguageWidget> {
               context.setLocale(const Locale('ar'));
               PreferencesHelper.saveLang(lang: 'ar');
               AppNavigation.pop();
+
             }),
         RadioListTile.adaptive(
-            title:   Text("English".tr()),
+            title:   Text("English".tr(),style: Theme.of(context).textTheme.bodySmall),
             value: 1,
-            activeColor: AppColors.primaryColor,
+            fillColor: WidgetStateProperty.all(Theme.of(context).hintColor),
+
+            activeColor: Theme.of(context).primaryColor,
+            // selectedTileColor: Theme.of(context).hintColor,
             groupValue: arabic,
             onChanged: (val) {
               setState(() {
