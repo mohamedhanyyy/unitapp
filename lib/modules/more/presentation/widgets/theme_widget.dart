@@ -17,14 +17,15 @@ class _ThemeWidgetState extends State<ThemeWidget> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text("Theme".tr(), style: Theme.of(context).textTheme.bodyLarge),
+        Text("Theme".tr(), style: Theme.of(context).textTheme.bodyMedium),
         RadioListTile.adaptive(
             title: Text(
               "Light".tr(),
-              style: Theme.of(context).textTheme.bodyLarge,
+              style: Theme.of(context).textTheme.bodySmall,
             ),
             value: 0,
-            activeColor: Theme.of(context).secondaryHeaderColor,
+            fillColor: WidgetStateProperty.all(Theme.of(context).hintColor),
+            activeColor: Theme.of(context).primaryColor,
             groupValue: light,
             onChanged: (val) {
               setState(() {
@@ -32,15 +33,13 @@ class _ThemeWidgetState extends State<ThemeWidget> {
               });
               PreferencesHelper.saveTheme(theme: 'light');
               RestartWidget.restartApp();
-              // AppNavigation.pop();
-            }),
+             }),
         RadioListTile.adaptive(
-            title: Text(
-              "Dark".tr(),
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
+            title: Text("Dark".tr(),
+                style: Theme.of(context).textTheme.bodySmall),
             value: 1,
-            // activeColor: Theme.of(context).highlightColor,
+            fillColor: WidgetStateProperty.all(Theme.of(context).hintColor),
+            activeColor: Theme.of(context).primaryColor,
             groupValue: light,
             onChanged: (val) {
               setState(() {

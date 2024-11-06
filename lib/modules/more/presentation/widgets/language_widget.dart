@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:unit/services/navigation/navigation.dart';
 import 'package:unit/services/shared_preferences/preferences_helper.dart';
 
-import '../../../../core/resources/colors.dart';
 
 class LanguageWidget extends StatefulWidget {
   const LanguageWidget({super.key});
